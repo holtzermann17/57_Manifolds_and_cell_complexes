@@ -1,0 +1,145 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FrechetSpace}
+\pmcreated{2013-03-22 13:06:10}
+\pmmodified{2013-03-22 13:06:10}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{Fr\'echet space}
+\pmrecord{51}{33528}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57N17}
+\pmclassification{msc}{54E50}
+\pmclassification{msc}{52A07}
+\pmrelated{TopologicalVectorSpace}
+\pmrelated{HausdorffSpaceNotCompletelyHausdorff}
+\pmdefines{F-space}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(} 
+
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+\begin{document}
+We consider two classes of topological vector spaces, one more general
+than the other. Following Rudin \cite{rudin_fa} we will define a Fr\'echet space
+to be an element of the smaller class, and refer to an instance of the
+more general class as an \emph{F-space}. After giving the
+definitions, we will explain why one definition is stronger than the
+other.
+
+
+\paragraph{Definition 1.}
+An F-space is a complete topological vector space whose topology is
+induced by a translation invariant metric. To be more precise, we say
+that $U$ is an F-space if there exists a metric function
+$$d:U\times U\rightarrow \reals$$
+such that $$d(x,y)=d(x+z,y+z),\quad x,y,z\in U;$$
+and such that the collection of balls
+$$B_\epsilon(x)=\{y\in U: d(x,y)<\epsilon\},\quad x\in U,\;
+\epsilon>0$$
+is a base for the topology of $U$.
+
+\paragraph{Note 1.} Recall that a topological vector space is a uniform space.
+The hypothesis that $U$ is complete is formulated in reference to this
+uniform structure. To be more precise, we say that a sequence $a_n\in
+U,\; n=1,2,\ldots$ is Cauchy if for every neighborhood $O$ of the
+origin there exists an $N\in\natnums$ such that
+$a_n-a_m\in O$ for all $n,m>N$. The completeness condition then takes
+the usual form of the hypothesis that all Cauchy sequences possess a
+limit point.
+
+\paragraph{Note 2.} It is customary to include the hypothesis that $U$ is
+Hausdorff in the definition of a topological vector space.
+Consequently, a Cauchy sequence in a complete topological space
+will have a unique limit.
+
+\paragraph{Note 3.} Since $U$ is assumed to be complete, the pair
+$(U,d)$ is a complete metric space. Thus, an equivalent definition of
+an F-space is that of a vector space equipped with a complete, translation-invariant (but not necessarily \PMlinkname{homogeneous}{NormedVectorSpace}) metric, such that the operations of scalar
+multiplication and vector addition are continuous with respect to this
+metric.
+
+\paragraph{Definition 2.}
+A Fr\'echet space is a complete topological vector space (either real
+or complex) whose topology is induced by a countable family of
+semi-norms. To be more precise, there exist semi-norm functions
+$$\Vert - \Vert_n : U \rightarrow \reals,\quad n\in\natnums,$$
+such that the collection of all balls
+$$B_{\epsilon}^{(n)}(x) = \{ y \in U : \Vert x-y\Vert_n < \epsilon\},\quad
+x\in U,\; \epsilon>0,\; n\in\natnums,$$
+is a base for the topology of $U$.
+
+% A topological vector space is Hausdorff, by definition, and so for
+% every non-zero $x\in U$ we must have $\Vert x\Vert_n > 0$ for at least
+% one of the seminorms.
+
+\begin{proposition}
+Let $U$ be a complete topological vector space. Then, $U$ is a
+Fr\'echet space if and only if it is a locally convex F-space.
+\end{proposition}
+
+\noindent\emph{Proof.}
+First, let us show that a Fr\'echet space is a locally convex F-space,
+and then prove the converse. Suppose then that $U$ is Fr\'echet. The
+semi-norm balls are convex; this follows directly from the semi-norm
+axioms. Therefore $U$ is locally convex. To obtain the desired
+distance function we set
+\begin{equation}
+\label{eq:ddef}
+d(x,y) = \sum_{n=0}^\infty 2^{-n} \frac{\Vert x-y \Vert_n}{1+\Vert
+x-y\Vert_n},\quad x,y\in U.
+\end{equation}
+
+We now show that $d$ satisfies the metric axioms. Let $x,y \in U$
+such that $x\neq y$ be given. Since $U$ is Hausdorff, there is at
+least one seminorm such
+$$\Vert x-y\Vert_n >0.$$
+Hence $d(x,y)>0$.
+
+Let $a,b,c>0$ be three real numbers such that
+$$a\leq b+c.$$
+A straightforward calculation shows
+that
+\begin{equation}
+\label{eq:ineq}
+\frac{a}{1+a}\leq \frac{b}{1+b}+\frac{c}{1+c},
+\end{equation}
+as well. The above trick underlies the definition \eqref{eq:ddef} of
+our metric function. By the seminorm axioms we have that
+$$\Vert x-z \Vert_n \leq \Vert x-y \Vert_n + \Vert y-z \Vert_n,\quad
+x,y,z\in U$$
+for all $n$. Combining this with \eqref{eq:ddef} and
+\eqref{eq:ineq} yields the triangle inequality for $d$.
+
+
+Next let us suppose that $U$ is a locally convex F-space, and prove
+that it is Fr\'echet. For every $n=1,2,\ldots$ let $U_n$ be an open
+convex neighborhood of the origin, contained inside a ball of radius
+$1/n$ about the origin. Let $\Vert - \Vert_n$ be the seminorm with
+$U_n$ as the unit ball. By definition, the unit balls of these
+seminorms give a neighborhood base for the topology of $U$. QED.
+
+
+\begin{thebibliography}{9}
+\bibitem{rudin_fa}
+W.Rudin, \emph{Functional Analysis}.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

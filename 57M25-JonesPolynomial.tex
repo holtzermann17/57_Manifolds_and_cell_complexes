@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{JonesPolynomial}
+\pmcreated{2013-03-22 18:51:58}
+\pmmodified{2013-03-22 18:51:58}
+\pmowner{Stephaninos}{23208}
+\pmmodifier{Stephaninos}{23208}
+\pmtitle{Jones Polynomial}
+\pmrecord{17}{41697}
+\pmprivacy{1}
+\pmauthor{Stephaninos}{23208}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57M25}
+\pmrelated{KnotTheory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{graphicx}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{conj}{Conjecture}[section]
+\newtheorem{exmp}{Example}[section]
+\begin{document}
+\textit{Introduction...}
+
+\begin{defn}
+An $N$-component link is the image of a $C^\infty$ embedding $f:\underbrace{S^1 \times\dots\times S^1}_{N \textrm{times}} \rightarrow\mathbb{R}^3$. If $N=1$, we call the link a \textbf{knot}.
+\end{defn}
+
+Using links and knots as embeddings is not very convenient, as visualising the bends and curves in $\mathbb{R}^3$ is very hard. Therefore, we use the notion of a knot diagram.
+
+\begin{defn}
+Given a knot $K$, a knot projection $\pi:\mathbb{R}^3\rightarrow\mathbb{R}^2$ is a linear surjective map that satisfies:
+\begin{enumerate}
+\item $\pi^2=\pi$
+\item $ \textrm{card}\{\pi^{-1}(x)\} \leq 2, \forall x \in \pi(K)$ 
+\item There is a finite number of points in $K$ for which $\textrm{card}\{\pi^{-1}(x)\}=2 $.
+\end{enumerate}
+A \textbf{knot diagram} is the image of a projection of a knot.
+\end{defn}
+
+Note that there is no universal definition of a knot, but this one is the one we use here. Specifically, this definition is used to rule out singular knots, whose projection has an infinite number of crossings.
+
+In this way, we have the set $D$ of all possible knot diagrams. Here, again one would like to study properties of truly distinct knot diagrams, so naturally we study $D/\sim'$, where $\sim'$ now represents an equivalence relation on $D$, consisting of 2-dimensional ambient isotopies and the \textit{Reidemeister moves}.
+
+Necessary is:
+
+\begin{defn}
+The \textit{writhe (or Tait number)} $w(L)$ is the sum of \textbf{all} crossing numbers of a given projection, $\displaystyle w(L)=\sum_i\textrm{sign}(c_i)$.
+\end{defn}
+
+\textit{Knot invariants}
+
+\begin{defn}\label{conj:2.1}
+Given a link projection $D$, let $y$ be a crossing, and $\hat{y}, \hat{y}'$ be that crossing opened vertically and horizontally. Then there exists a polynomial $P_L(\xi,\eta,\psi)$ that satisfies:
+\begin{enumerate}
+\item $P_\textrm{unknot}=1$
+\item $P_y=\xi P_{\hat{y}}+\eta P_{\hat{y}'}$
+\item $P_{L\cup \textrm{unknot}}=\psi P_L$
+\end{enumerate}
+where  $\xi, \eta, \psi \in\mathbb{R}$. This $P_L$ is called the \textit{bracket}, also denoted by $[ .. ]$.
+\end{defn}
+
+\noindent An important remark here is that this definition of the polynomial is through a recursion on the number of crossings of a link diagram. This means that we can construct the polynomial by performing as many recursions as there are crossings and so this polynomial is well defined, because there are only a finite number of crossings in our knots. 
+
+\begin{cor}\label{productofP}
+From this also follows that $P_{L_1\cup L_2}=\psi P_{L_1} P_{L_2}$ 
+\end{cor}
+
+\begin{exmp}\label{brackethopf}
+For the Hopf link, we see that the bracket polynomial $[\textrm{Hopf}]=\eta\xi+\xi^2\psi+\eta\xi+\eta^2\psi$.
+\end{exmp}
+
+\begin{conj}
+$\hat{P}_L=\alpha P_L, \alpha \in \mathbb{R}$, is a knot invariant for a suitable chosen $\alpha$.
+\end{conj}
+
+This is not true (reason will be added, just check the Reidemeister moves), but this is:
+
+\begin{prop}
+$\hat{P}_L(\xi):=(-\xi^{-3})^{w(L)}P_L(\xi,\xi^{-1},-\xi^2-\xi^{-2})$ is a knot invariant.
+\end{prop}
+
+\begin{proof}
+Since $w(L)$ and $P_L$ are invariant under $\Omega_2$, $\Omega_3$, $\hat{P}_L(\xi)$ naturally is invariant under those moves too. Under $\Omega_1$, a positive crossing attains an extra term $-\xi^3$ which is compensated by the extra $-\xi^{-3}$ of the prefactor, since $\Omega_1$ changes the writhe by +1. For a negative crossing, the result is analogous. Therefore, $\hat{P}_L(\xi)$ is invariant under $\Omega_1$ also. Finally, because all projections of a link can be obtained through a finite number of Reidemeister moves, $\hat{P}_L(\xi)$ is a knot invariant.
+\end{proof}
+
+\noindent Now the Jones polynomial, first conceived by \textit{Vaughan Jones} in 1984, is exactly $J_L(t):=\hat{P}_L(t^{-\frac{1}{4}})$. 
+
+\begin{exmp}
+For the Hopf link, $w(L)=2$ and $P_\textrm{Hopf}=\xi^2(-\xi^2-\xi^{-2})+1+1+\xi^{-2}(-\xi^2-\xi^{-2})=-\xi^4-\xi^{-4}$. Therefore, $J_{\textrm{Hopf}}(t)=(-(t^{-\frac{1}{4}})^{-3})^2 ((-(t^{-\frac{1}{4}})^4)-(t^{-\frac{1}{4}})^{-4})=-(t^{\frac{1}{2}}+t^{\frac{5}{2}})$
+\end{exmp}
+
+\noindent Having defined the Jones polynomial, this allows us once again to classify knots. Notice that the Jones polynomial allows the powers of $t$ to be negative. Each knot has a Jones polynomial associated to it and it has been shown that the Jones polynomial distinguishes between more knots than simple knot invariants, such as tricolorability. In this sense, the Jones polynomial is a better invariant to determine nonequivalency between two knots. Although it is known that there are pairs of knots that have the same Jones polynomial, the question whether or not there exists a nontrivial knot which has Jones polynomial 1 (same as the unknot), but is not equivalent to the unknot, has still not been answered. Above all, it should be clear that the Jones polynomial still does not suffice to distinguish all possible knots.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HairyBallTheorem}
+\pmcreated{2013-03-22 13:11:33}
+\pmmodified{2013-03-22 13:11:33}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{hairy ball theorem}
+\pmrecord{12}{33646}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R22}
+\pmsynonym{porcupine theorem}{HairyBallTheorem}
+\pmsynonym{PoincarÃ©-Hopf theorem}{HairyBallTheorem}
+\pmdefines{Poincar\'e-Hopf index theorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\begin{document}
+\begin{theorem*}
+If $X$ is a vector field on $S^{2n}$, then $X$ has a zero.
+Alternatively, there are no continuous unit vector field on
+the sphere.  Moreover, the tangent bundle of the sphere is
+nontrivial as a bundle, that is, it is not simply a product.
+\end{theorem*}
+
+There are two proofs for this.  The first proof is based
+on the fact that the antipodal map on $S^{2n}$ is not homotopic to the 
+identity map.  The second proof gives the \PMlinkescapetext{hairy ball theorem}
+as a corollary of the Poincar\'e-Hopf index theorem.
+
+Near a zero of a vector field, we can consider a small sphere around the zero, and restrict the vector field to that. By normalizing, we get a map from the sphere to itself. We define the index of the vector field at a zero to be the degree of that map.
+
+\begin{theorem*}[Poincar\'e-Hopf index theorem]
+If $X$ is a vector field on a compact manifold $M$ with 
+isolated zeroes, then $\chi(M)=\sum_{v\in Z(X)}\iota(v)$ 
+where $Z(X)$ is the set of zeroes of $X$, and $\iota(v)$ is 
+the index of $x$ at $v$, and $\chi(M)$ is the Euler characteristic of $M$.
+\end{theorem*}
+
+It is not difficult to show that $S^{2n+1}$ has non-vanishing vector 
+fields for all $n$.  A much harder result of Adams shows that the 
+tangent bundle of $S^m$ is trivial if and only if $n=0,1,3,7$, 
+corresponding to the unit spheres in the 4 real division algebras.
+
+\begin{proof}
+First, the low tech proof.  Assume that $S^{2n}$ has a unit vector field
+$X$.  Then the \PMlinkname{antipodal map is homotopic to the identity}{AntipodalMapOnSnIsHomotopicToTheIdentityIfAndOnlyIfNIsOdd}.  
+But this cannot be, since the degree of the antipodal map is $-1$ and
+the degree of the identity map is $+1$.  We therefore reject the
+assumption that $X$ is a unit vector field.
+
+This also implies that the tangent bundle of $S^{2n}$ is non-trivial, 
+since any trivial bundle has a non-zero section.
+\end{proof}
+
+\begin{proof}
+Now for the sledgehammer proof.
+Suppose $X$ is a nonvanishing vector field on $S^{2n}$.  
+Then by the Poincar\'e-Hopf index theorem, the Euler characteristic 
+of $S^{2n}$ is $\chi(X)=\sum_{v\in X^{-1}(0)}\iota(v)=0$.  But the Euler characteristic of $S^{2k}$ is $2$.  Hence $X$ must have a zero.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IsomorphismOfTheGroupPSL2CWithTheGroupOfMobiusTransformations}
+\pmcreated{2013-03-22 12:43:30}
+\pmmodified{2013-03-22 12:43:30}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{isomorphism of the group PSL_2(C) with the group of M\"obius transformations}
+\pmrecord{9}{33023}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57S25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+
+\newcommand{\smfour}[4]
+{
+  {
+    \left(
+      \begin{smallmatrix}
+      {#1}&{#2}\\
+      {#3}&{#4}
+      \end{smallmatrix}
+    \right)
+  }
+}
+
+\newcommand{\mobius}[5]{{\frac{#2#1+#3}{#4#1+#5}}}
+\begin{document}
+%\newcommand{smfour}[4]{{\left(\begin{smallmatrix}{#1}&{#2}\\{#3}&{#4}\end{smallmatrix}\right)}}
+%\newcommand{mobius}[5]{{\frac{#2#1+#3}{#4#1+#5}}}
+
+We identify the group $G$ of M\"obius transformations with the projective special linear group $PSL_2(\mathbb{C})$.  The isomorphism~$\Psi$ (of topological groups) is given by $\Psi: \left[\smfour{a}{b}{c}{d}\right] \mapsto \mobius{z}{a}{b}{c}{d}$.  (Here, the notation $[M]$ means the equivalence class $[M] = \{ Mt \mid t \in \mathbb{C} \}$)
+
+This mapping is:
+\begin{description}
+
+\item[Well-defined:]
+If $\left[\smfour{a}{b}{c}{d}\right]=\left[\smfour{a'}{b'}{c'}{d'}\right]$
+then $(a',b',c',d')=t(a,b,c,d)$ for some $t$, so $z\mapsto\mobius{z}{a}{b}{c}{d}$ is the same transformation as $z\mapsto\mobius{z}{a'}{b'}{c'}{d'}$.
+
+\item[A homomorphism:]
+Calculating the composition
+\[
+\left.\mobius{z}{a}{b}{c}{d}\right|_{z=\mobius{w}{e}{f}{g}{h}} =
+\frac{a\mobius{w}{e}{f}{g}{h}+b}{c\mobius{w}{e}{f}{g}{h}+d} =
+\frac{(ae+bg)w+(af+bh)}{(ce+dg)w+(cf+dh)}
+\]
+we see that $\Psi\left(\left[\smfour{a}{b}{c}{d}\right]\right)\cdot \Psi\left(\left[\smfour{e}{f}{g}{h}\right]\right) =
+\Psi\left(\left[\smfour{a}{b}{c}{d}\right]\cdot
+\left[\smfour{e}{f}{g}{h}\right]\right)$.
+
+\item[A monomorphism:]
+If $\Psi\left(\left[\smfour{a}{b}{c}{d}\right]\right)=
+\Psi\left(\left[\smfour{a'}{b'}{c'}{d'}\right]\right)$, then it follows that $(a',b',c',d')=t(a,b,c,d)$,
+so that
+$\left[\smfour{a}{b}{c}{d}\right]=
+\left[\smfour{a'}{b'}{c'}{d'}\right]$.
+
+\item[An epimorphism:]
+Any M\"obius transformation $z\mapsto\mobius{z}{a}{b}{c}{d}$ is the image $\Psi\left(\left[\smfour{a}{b}{c}{d}\right]\right)$.
+
+\end{description}
+%%%%%
+%%%%%
+\end{document}

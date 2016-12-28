@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BrouwerDegree}
+\pmcreated{2013-03-22 14:52:37}
+\pmmodified{2013-03-22 14:52:37}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Brouwer degree}
+\pmrecord{7}{36554}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R35}
+\pmsynonym{degree}{BrouwerDegree}
+\pmrelated{DegreeMod2OfAMapping}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+Suppose that $M$ and $N$ are two oriented differentiable manifolds
+of dimension $n$ (without boundary) with $M$ compact and $N$ connected and suppose that
+$f \colon M \to N$ is a differentiable mapping.  Let $Df(x)$ denote the
+differential mapping at the point $x \in M$,
+that is the linear mapping $Df(x) \colon T_x(M) \to T_{f(x)}(N)$.  Let $\operatorname{sign} Df(x)$ denote the sign
+of the determinant of $Df(x)$.  That is the sign is positive if $f$ preserves
+orientation and negative if $f$ reverses orientation.
+
+\begin{defn}
+Let $y \in N$ be a regular value, then we define the {\em Brower degree} (or just
+degree) of $f$ by
+\begin{equation*}
+\operatorname{deg} f := \sum_{x \in f^{-1}(y)} \operatorname{sign} Df(x) .
+\end{equation*}
+\end{defn}
+
+It can be shown that the degree does not depend on the regular value $y$ that we pick so that $\operatorname{deg} f$ is well defined.
+
+Note that this degree coincides with the \PMlinkname{degree}{Degree5} as defined for maps of spheres.
+
+\begin{thebibliography}{9}
+\bibitem{Milnor:topdiff}
+John~W. Milnor.
+{\em \PMlinkescapetext{Topology From The Differentiable Viewpoint}}.
+The University Press of Virginia, Charlottesville, Virginia, 1969.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

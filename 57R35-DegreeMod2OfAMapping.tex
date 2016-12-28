@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DegreeMod2OfAMapping}
+\pmcreated{2013-03-22 14:52:39}
+\pmmodified{2013-03-22 14:52:39}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{degree mod 2 of a mapping}
+\pmrecord{6}{36555}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R35}
+\pmsynonym{degree mod 2}{DegreeMod2OfAMapping}
+\pmsynonym{degree modulo 2}{DegreeMod2OfAMapping}
+\pmrelated{BrouwerDegree}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+Suppose that $M$ and $N$ are two differentiable manifolds
+of dimension $n$ (without boundary) with $M$ compact and $N$ connected and
+ suppose that
+$f \colon M \to N$ is a differentiable mapping.  If $y \in N$ is a regular
+value of $f$, then we denote by $\# f^{-1}(y)$ the number of points in $M$
+that map to $y$.
+
+\begin{defn}
+Let $y \in N$ be a regular value, then we define the {\em degree mod 2}  of $f$ by
+\begin{equation*}
+\operatorname{deg}_2 f := \# f^{-1}(y) \pmod{2} .
+\end{equation*}
+\end{defn}
+
+It can be shown that the degree mod 2 does not depend on the regular value $y$ that we pick so that $\operatorname{deg}_2 f$ is well defined.
+
+This is similar to the Brouwer degree but does not require oriented manifolds.  In fact $\operatorname{deg}_2 f = \operatorname{deg} f \pmod{2}$.
+
+\begin{thebibliography}{9}
+\bibitem{Milnor:topdiff}
+John~W. Milnor.
+{\em \PMlinkescapetext{Topology From The Differentiable Viewpoint}}.
+The University Press of Virginia, Charlottesville, Virginia, 1969.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Transversality}
+\pmcreated{2013-03-22 13:29:46}
+\pmmodified{2013-03-22 13:29:46}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{transversality}
+\pmrecord{6}{34071}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R99}
+\pmdefines{transversal}
+\pmdefines{transverse}
+\pmdefines{transversally}
+\pmdefines{transversely}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Transversality is a fundamental concept in differential topology. We say that two smooth submanifolds $A,B$ of a smooth manifold $M$ intersect \emph{transversely}, if at any point $x\in A\cap B$, we have
+\[ T_x A + T_x B = T_x X, \]
+where $T_x$ denotes the tangent space at $x$, and we naturally identify $T_x A$ and $T_x B$ with subspaces of $T_x X$. 
+
+In this case, $A$ and $B$ intersect properly in the sense that $A\cap B$ is a submanifold of $M$, and
+\[ \mathrm{codim}(A\cap B) = \mathrm{codim}(A) + \mathrm{codim}(B). \]
+
+A useful generalization is obtained if we replace the inclusion $A\hookrightarrow M$ with a smooth map $f:A\to M$. In this case we say that $f$ is transverse to $B\subset M$, if for each point $a\in f^{-1}(B)$, we have
+\[ df_a(T_a A) + T_{f(a)}B = T_{f(a)}M. \]
+In this case it turns out, that $f^{-1}(B)$ is a submanifold of $A$, and
+\[ \mathrm{codim}(f^{-1}(B)) = \mathrm{codim}(B).\]
+
+Note that if $B$ is a single point $b$, then the condition of $f$ being transverse to $B$ is precisely that $b$ is a regular value for $f$. The result is that $f^{-1}(b)$ is a submanifold of $A$. A further generalization can be obtained by replacing the inclusion of $B$ by a smooth function as well. We leave the details to the reader. 
+
+The importance of transversality is that it's a stable and generic condition. This means, in broad terms that if $f:A\to M$ is transverse to $B\subset M$, then small perturbations of $f$ are also transverse to $B$. Also, given any smooth map $A\to M$, it can be perturbed slightly to obtain a smooth map which is transverse to a given submanifold $B\subset M$.
+%%%%%
+%%%%%
+\end{document}

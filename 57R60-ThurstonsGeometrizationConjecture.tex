@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ThurstonsGeometrizationConjecture}
+\pmcreated{2013-03-22 16:23:28}
+\pmmodified{2013-03-22 16:23:28}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Thurston's geometrization conjecture}
+\pmrecord{12}{38536}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Conjecture}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R60}
+\pmsynonym{geometrization conjecture}{ThurstonsGeometrizationConjecture}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\em Thurston's geometrization conjecture}, also known simply as the {\em geometrization conjecture}, states that compact 3-manifolds can be decomposed into pieces with geometric structures. The geometrization conjecture is an analogue for 3-manifolds of the uniformization theorem for surfaces.  It was proposed by William Thurston in the late 1970s, and implies several other conjectures, such as the PoincarÃ© conjecture and Thurston's elliptization conjecture.  
+
+Grigori Perelman sketched a proof of the geometrization conjecture in 2003 using Ricci flow with surgery, which (as of 2006) appears to be essentially correct.
+
+\section{The conjecture}
+
+A 3-manifold is called closed if it is compact and has no boundary.
+
+Every closed 3-manifold has a  prime decomposition: this means it is the connected sum of an essentially unique collection of prime three-manifolds. This reduces much of the study of 3-manifolds to the case of prime 3-manifolds: those that cannot be written as a non-trivial connected sum. 
+
+Every prime closed 3-manifold can be cut along tori, so that the interior of each of the resulting manifolds has a geometric structure with finite volume.
+
+There are 8 possible geometric structures in 3 dimensions, described in the next section.
+Cutting a prime 3-manifold along tori into pieces that are Seifert manifolds or atoroidal is called the JSJ decomposition: there is  a  minimal way of doing this, which is essentially unique. 
+
+There are similar statements for compact manifolds with boundary without $S^2$ boundary components. 
+
+In 2 dimensions the analogous statement says that every  surface (without boundary) has a geometric structure consisting of a metric with constant curvature; it is not necessary to cut the manifold up first.
+
+\section{The eight Thurston geometries}
+
+A model geometry is a simply connected smooth manifold $M$ acted on  by a Lie group $G$,  such that $G$ is maximal among groups acting smoothly and transitively on $M$ with compact stabilizers, and there is at least one compact manifold modeled on $M$.    
+
+A geometric structure on a manifold is an isomorphism of the manifold with $M\Gamma$ for some model geometry $M$ where $\Gamma$ is a discrete subgroup of $G$ acting freely on $M$.
+
+$S^2$ is the round 2-sphere and  $\mathbb{H}^2$ is the hyperbolic plane. 
+
+Seven of the eight geometries (all except hyperbolic) are now clearly understood and known to correspond to Seifert manifolds and torus bundles.  Using information about Seifert manifolds, we can restate the conjecture more tersely as:
+
+Every prime, compact 3-manifold falls into exactly one of the following categories:
+
+\begin{itemize}
+
+\item It has a spherical geometry.
+
+\item It has a hyperbolic geometry,
+
+\item The fundamental group contains a free abelian group on two generators (the fundamental group of a torus).
+
+\item It has $S^2 \times \mathbb{R}$ geometry.
+
+\end{itemize}
+
+\section{History}
+
+If Thurston's conjecture is correct, then so is the PoincarÃ© conjecture (via Thurston's elliptization conjecture). The Fields Medal was awarded to Thurston in 1982 partially for his proof of the conjecture for Haken manifolds.
+
+The case of 3-manifolds that should be spherical has been slower, but provided the spark needed for Richard Hamilton to develop his Ricci flow.  In 1982, Hamilton showed that given a closed 3-manifold with a metric of positive Ricci curvature, the Ricci flow would collapse the manifold to a point in finite time, which proves the geometrization conjecture for this case as the metric becomes "almost round" just before the collapse.  He later developed a program to prove the Geometrization Conjecture by Ricci flow.
+
+In 2003 Grigori Perelman sketched a proof of the geometrization conjecture by extending Hamilton's Ricci flow program to include surgery whenever the Ricci flow produces singularities. As of 2006 the consensus among those who have checked his work is that it is essentially correct, and the details have now been filled in. According to the Clay Mathematics Institute, he may be eligible for the Institute's Millennium Prize Problems, although he has not submitted his work to a peer-reviewed journal.
+
+{\it This entry was adapted from the Wikipedia article \PMlinkexternal{Geometrization conjecture}{http://en.wikipedia.org/wiki/Thurston's_geometrization_conjecture} as of November 10, 2006.}
+
+\begin{thebibliography}{4}
+\bibitem{gp} G. Perelman, {\it The entropy formula for the Ricci flow and its geometric applications}, 2002
+\bibitem{gq} G. Perelman, {\it Ricci flow with surgery on three-manifolds}, 2003
+\bibitem{bk} B. Kleiner and J. Lott, {\it Notes on Perelman's Papers}, 2006
+\bibitem{bt} W. Thurston, {\it Three-dimensional geometry and topology,} Vol. 1. Edited by S. Levy. Princeton Mathematical Series, 35. Princeton University Press, Princeton, NJ, 1997. \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

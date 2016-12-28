@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfDifferentiableFunctionWhichIsNotContinuouslyDifferentiable}
+\pmcreated{2013-03-22 14:10:18}
+\pmmodified{2013-03-22 14:10:18}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{example of differentiable function which is not continuously differentiable}
+\pmrecord{8}{35597}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R35}
+\pmclassification{msc}{26A24}
+%\pmkeywords{topologist's sine curve}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $f$ be defined in the following way:
+\[
+f(x)=\begin{cases}
+x^2\sin\left(\frac{1}{x}\right) & \text{if }x\neq 0\\
+0 & \text{if }x=0.
+\end{cases}
+\]
+Then if $x\neq 0$, $f'(x)=2x\sin\left(\frac{1}{x}\right) - \cos\left(\frac{1}{x}\right)$ using the usual rules for calculating derivatives.  If $x=0$, we must compute the derivative by evaluating the limit
+\[
+\lim_{\epsilon\to 0} \frac{f(\epsilon)-f(0)}{\epsilon}
+\]
+which we can simplify to 
+\[
+\lim_{\epsilon\to 0} \, \epsilon\sin\left(\frac{1}{\epsilon}\right).
+\]
+We know $\left|\sin(x)\right|\leq 1$ for every $x$, so this limit is just $0$.  Combining this with our previous calculation, we see that
+\[
+f'(x)=\begin{cases}
+2x\sin\left(\frac{1}{x}\right) - \cos\left(\frac{1}{x}\right) & \text{if }x\neq 0 \\
+0 & \text{if }x=0.
+\end{cases}
+\]
+This is just a slightly modified version of the topologist's sine curve; in particular,
+\[
+\lim_{x\to 0} f'(x)
+\]
+diverges, so that $f'(x)$ is not continuous, even though it is defined for every real number.  Put another way, $f$ is differentiable but not $C^1$.
+%%%%%
+%%%%%
+\end{document}

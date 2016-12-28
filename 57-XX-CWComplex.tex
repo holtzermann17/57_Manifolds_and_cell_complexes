@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CWComplex}
+\pmcreated{2013-03-22 13:26:02}
+\pmmodified{2013-03-22 13:26:02}
+\pmowner{antonio}{1116}
+\pmmodifier{antonio}{1116}
+\pmtitle{CW complex}
+\pmrecord{10}{33994}
+\pmprivacy{1}
+\pmauthor{antonio}{1116}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57-XX}
+\pmclassification{msc}{55-XX}
+\pmsynonym{CW-complex}{CWComplex}
+\pmrelated{SimplicialComplex}
+\pmrelated{CellAttachment}
+\pmrelated{ApproximationTheoremForAnArbitrarySpace}
+\pmrelated{SpinNetworksAndSpinFoams}
+\pmrelated{CWComplexDefinitionRelatedToSpinNetworksAndSpinFoams}
+\pmrelated{GeneralizedHurewiczFundamentalTheorem}
+\pmrelated{VariableTopology3}
+\pmrelated{QuantumAlgebraicTopologyOfCWComplexRepres}
+\pmdefines{skeleton}
+\pmdefines{skeleta}
+\pmdefines{closure-finite}
+\pmdefines{cell complex}
+\pmdefines{CW structure}
+\pmdefines{CW-structure}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\limv}[2]{\lim\limits_{#1\rightarrow #2}}
+\newcommand{\eb}{\mathbf{e}} % Standard basis
+\newcommand{\comp}{\circ} % Function composition
+\newcommand{\reals}{{\mathbb R}} % The reals
+\newcommand{\integs}{{\mathbb Z}} % The integers
+\newcommand{\setc}[2]{\left\{#1:\: #2\right\}}
+\newcommand{\set}[1]{{\left\{#1\right\}}}
+\newcommand{\cycle}[1]{\left(#1\right)}
+\newcommand{\tuple}[1]{\left(#1\right)}
+\newcommand{\Partial}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\PartialSl}[2]{\partial #1/\partial #2}
+\newcommand{\funcsig}[2]{#1\rightarrow #2}
+\newcommand{\funcdef}[3]{#1:\funcsig{#2}{#3}}
+\newcommand{\supp}{\mathop{\mathrm{Supp}}} % Support of a function
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}} % Sign function
+\newcommand{\tr}[1]{#1^\mathrm{tr}} % Transpose of a matrix
+\newcommand{\inprod}[2]{\left<#1,#2\right>} % Inner product
+\newenvironment{smallbmatrix}{\left[\begin{smallmatrix}}{\end{smallmatrix}\right]}
+\newcommand{\maps}[2]{\mathop{\mathrm{Maps}}\left(#1,#2\right)}
+\newcommand{\intoc}[2]{\left(#1,#2\right]}
+\newcommand{\intco}[2]{\left[#1,#2\right)}
+\newcommand{\intoo}[2]{\left(#1,#2\right)}
+\newcommand{\intcc}[2]{\left[#1,#2\right]}
+\newcommand{\transv}{\pitchfork}
+\newcommand{\pair}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\sqnorm}[1]{\left\|#1\right\|^2}
+\newcommand{\bdry}{\partial}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\tensor}{\otimes}
+\newcommand{\bigtensor}{\bigotimes}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\coker}{\operatorname{im}}
+\newcommand{\map}{\operatorname{Map}}
+\newcommand{\crit}{\operatorname{Crit}}
+\newtheorem{thm}{Theorem}
+\newtheorem{dthm}[thm]{Desired Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{dcor}[thm]{Desired Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{defn}{Definition}
+\newtheorem{rmk}{Remark}
+\newcommand{\cross}{\times}
+\newcommand{\del}{\nabla}
+\newcommand{\homeo}{\cong}
+\newcommand{\isom}{\cong}
+\newcommand{\htpyeq}{\backsimeq}
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\projp}{{\mathbb R}P}
+
+% open cells (not very nice...)
+\newcommand{\oce}{\smash{\overset{\circ}e}} 
+\newcommand{\ocD}{\smash{\overset{\circ}D}} 
+
+\newcommand{\susp}{\Sigma}
+\begin{document}
+\newcommand{\skel}[2]{{#1}^{(#2)}}
+
+A Hausdorff topological space $X$ is said to be a {\em CW~complex\/} if it \PMlinkescapetext{satisfies} the following conditions:
+\begin{enumerate}
+\item
+There exists a filtration by subspaces
+\[\skel{X}{-1}\subseteq\skel{X}{0}\subseteq \skel{X}{1}\subseteq \skel{X}{2}\subseteq\cdots \]
+with $X=\bigcup\limits_{n\ge -1} \skel{X}{n}.$
+
+\item
+$\skel{X}{-1}$ is empty, and, for $n\ge 0, \skel{X}{n}$ is obtained
+from $\skel{X}{n-1}$ by attachment of a collection $\set{e_\iota^n:\:\iota\in I_n}$ of $n$-cells.
+
+\item {\em (``closure-finite'')\/}
+Every closed cell is contained in a finite union of open cells.
+
+\item {\em (``weak topology'')\/}
+$X$ has the weak topology with respect to the collection of all cells.
+That is, $A\subset X$ is closed in $X$ if and only if the intersection of $A$
+with every closed cell $e$ is closed in $e$ with respect to the subspace topology. 
+\end{enumerate}
+
+The letters `C' and `W' stand for ``closure-finite'' and ``weak topology,'' respectively. In particular, this means that one shouldn't look too closely at
+the initials of J.H.C.~Whitehead, who invented CW~complexes.
+
+The subspace $\skel{X}{n}$ is called the $n$-skeleton of $X.$ Note that there normally are many possible choices of a filtration by skeleta for a given CW~complex. A particular choice of skeleta and attaching maps for the cells is called a {\em CW~structure\/} on the space.
+
+Intuitively, $X$ is a CW~complex if it can be constructed, starting from a discrete space, by first attaching one-cells, then two-cells, and so on. Note that the definition above does not allow one to attach $k$-cells before $h$-cells if $k>h.$ While some authors allow this in the definition, it seems to be common usage to restrict CW~complexes to the definition given here, and to call a space constructed by cell attachment with unrestricted order of dimensions a {\em cell complex.} This is not essential for homotopy purposes, since any cell complex is homotopy equivalent to a CW~complex.
+
+CW~complexes are a generalization of simplicial complexes, and have some of the same advantages. In particular, they allow inductive reasoning on the \PMlinkescapetext{basis} of skeleta. However, CW~complexes are far more flexible than simplicial complexes. For a space $X$ drawn from ``everyday'' topological spaces, it is a good bet that it is homotopy equivalent, or even homeomorphic, to a CW~complex. This includes, for instance, smooth finite-dimensional manifolds, algebraic varieties, certain smooth infinite-dimensional manifolds (such as Hilbert manifolds), and loop spaces of CW~complexes. This makes the category of spaces homotopy equivalent to a CW~complex a very popular category for doing homotopy theory.
+
+\begin{rmk}
+There is potential for confusion in the way words like ``open'' and ``interior'' are used for cell complexes. If $e^k$ is a closed $k$-cell in CW~complex $X$ it does {\em not} follow that the corresponding open cell $\oce^k$ is an open set of $X.$ It is, however, an open set of the $k$-skeleton. 
+Also, while $\oce^k$ is often referred to as the ``interior'' of $e^k,$ it is not necessarily the case that it is the interior of $e^k$ in the sense of pointset topology. In particular, any closed $0$-cell is its own corresponding open $0$-cell, even though it has empty interior in most cases.
+\end{rmk}
+%%%%%
+%%%%%
+\end{document}

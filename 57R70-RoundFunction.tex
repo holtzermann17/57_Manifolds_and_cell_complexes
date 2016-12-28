@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RoundFunction}
+\pmcreated{2013-03-22 15:44:12}
+\pmmodified{2013-03-22 15:44:12}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{round function}
+\pmrecord{11}{37687}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R70}
+\pmsynonym{functions with critical loops}{RoundFunction}
+%\pmkeywords{Functions on manifolds}
+%\pmkeywords{critical points}
+\pmrelated{DifferntiableFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\paren}[1]{\left(\begin{array}{c} #1 \end{array}\right) }
+\begin{document}
+Let $M$ be a manifold. By a \emph{round function} we \PMlinkescapetext{mean} a function $M\to{\mathbb{R}}$ whose critical points form connected components, each of which is homeomorphic to the circle $S^1$.
+
+For example, let $M$ be the torus. Let $K=]0,2\pi[\times]0,2\pi[$.  Then we know that a map 
+$X\colon K\to{\mathbb{R}}^3$ given by 
+$$X(\theta,\phi)=((2+\cos\theta)\cos\phi,(2+\cos\theta)\sin\phi,\sin\theta)$$
+is a parametrization for almost all of $M$. Now, via the projection $\pi_3\colon{\mathbb{R}}^3\to{\mathbb{R}}$
+we get the restriction $G=\pi_3|_M\colon M\to{\mathbb{R}}$ whose critical sets are determined by 
+$$\nabla G(\theta,\phi)=\paren{{\partial G\over \partial\theta},{\partial G\over \partial\phi}}(\theta,\phi)=(0,0)$$ 
+if and only if $\theta={\pi\over 2},\ {3\pi\over 2}$.
+
+These two values for $\theta$ give the critical set
+$$X\paren{{\pi\over 2},\phi}=(2\cos\phi,2\sin\phi,1)$$
+$$X\paren{{3\pi\over 2},\phi}=(2\cos\phi,2\sin\phi,-1)$$
+which represent two extremal circles over the torus $M$.
+
+Observe that the Hessian for this function  is
+$d^2(G)=
+\left(\begin{array}{cc}
+-\sin\theta & 0 \\
+0          & 0 
+\end{array}\right)
+$
+which clearly it reveals itself as of ${\rm rank}(d^2(G))=1$ at the tagged circles, 
+making the critical point degenerate, that is, showing that the critical points are not isolated.
+%%%%%
+%%%%%
+\end{document}

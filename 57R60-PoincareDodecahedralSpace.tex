@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PoincareDodecahedralSpace}
+\pmcreated{2013-03-22 13:56:21}
+\pmmodified{2013-03-22 13:56:21}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Poincar\'e dodecahedral space}
+\pmrecord{65}{34700}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R60}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Poincar\'e originally conjectured \cite{poincare1900} that a \PMlinkname{homology 3-sphere}{HomologySphere} must be homeomorphic to $S^3$.   He later found a counterexample based on the group of rotations of the 
+\PMlinkname{regular dodecahedron}{RegularPolyhedron}, and restated his conjecture in \PMlinkescapetext{terms} of the fundamental group.  (See \cite{poincare1904}).  To be accurate, the restatement took the form of a question.  However it has always been referred to as Poincar\'e's Conjecture.)  
+
+This conjecture was one of the \PMlinkexternal{Clay Mathematics Institute's}{http://www.claymath.org/}  Millennium Problems.  It was finally proved by \PMlinkname{Grisha Perelman}{GrigoriPerelman} as a 
+corollary of his \PMlinkescapetext{work} on \PMlinkname{Thurston's geometrization conjecture}{ThurstonsGeometrizationConjecture}. Perelman was awarded the \PMlinkname{Fields Medal}{FieldsMedal} for this work, but he 
+\PMlinkexternal{declined the award}{http://news.bbc.co.uk/2/hi/science/nature/5274040.stm}. 
+ Perelman's manuscripts can be found at the arXiv: \cite{perelman2002a}, \cite{perelman2002b},
+\cite{perelman2002c}.
+ 
+
+
+Here we take a quick look at Poincar\'e's example.  Let $\Gamma$ be the rotations of the 
+\PMlinkname{regular dodecahedron}{RegularPolyhedron}.  It is easy to check that $\Gamma\cong A_5$.  (Indeed, $\Gamma$ \PMlinkname{permutes transitively}{GroupAction} the 6 pairs of \PMlinkescapetext{opposite} faces, and the stabilizer of any pair induces a dihedral group of \PMlinkname{order}{OrderGroup} 10.)  In particular, $\Gamma$ is perfect.  Let $P$ be the quotient space $P=SO_{3}(\mathbb{R})/\Gamma$.  We check that $P$ is a homology sphere.
+
+To do this it is easier to work in the universal cover $SU(2)$ of $SO_{3}(\mathbb{R})$, since $SU(2)\cong S^3$.  The \PMlinkescapetext{lift} of $\Gamma$ to $SU(2)$ will be denoted $\hat\Gamma$.  Hence $P=SU(2)/\hat\Gamma$.  $\hat\Gamma$ is a nontrivial central \PMlinkescapetext{extension} of $A_5$ by $\{\pm I\}$, which means that there is no splitting to the surjection $\hat\Gamma\to\Gamma$.  In fact $A_5$ has no nonidentity 2-dimensional unitary representations.  In particular, $\hat\Gamma$, like $\Gamma$, is \PMlinkname{perfect}{PerfectGroup}.  
+
+Now $\pi_1(P)\cong\hat\Gamma$, whence $H^1(P)=0$ (since it is the abelianization of $\hat\Gamma$).  By Poincar\'e duality and the \PMlinkname{universal coefficient theorem}{UniversalCoefficentTheorem}, $H^2(P)\cong0$ as well.  Thus, $P$ is indeed a homology sphere.
+
+The dodecahedron is a fundamental \PMlinkescapetext{cell} in a tiling of hyperbolic 3-space, and hence $P$ can also be realized by gluing the \PMlinkescapetext{opposite} faces of a \PMlinkescapetext{solid} dodecahedron.  Alternatively, Dehn showed how to construct this same example using surgery around a trefoil.  
+Dale Rolfson's fun book  \cite{rolfson1976} has more on the surgical view of Poincar\'e's example.
+
+\begin{thebibliography}{9900000000}
+\bibitem{perelman2002a}
+  G. Perelman, 
+\PMlinkexternal{``The entropy formula for the Ricci flow and its geometric applications''}{http://arxiv.org/abs/math.DG/0211159/},
+\bibitem{perelman2002b}
+  G. Perelman, 
+\PMlinkexternal{``Ricci flow with surgery on three-manifolds''}{http://arxiv.org/abs/math.DG/0303109/},
+\bibitem{perelman2002c}
+  G. Perelman, \PMlinkexternal{``Finite extinction time for the solutions to the Ricci flow on certain three-manifolds''}{http://arxiv.org/abs/math.DG/0307245/}.
+\bibitem{poincare1900}
+ H. Poincar\'e, ``Second compl\'ement \`a l'analysis situs'', Proceedings of the LMS, 1900.
+\bibitem{poincare1904}
+  H. Poincar\'e, ``Cinqui\`eme compl\'ement \`a l'analysis situs'', Proceedings of the LMS, 1904.
+\bibitem{rolfson1976}  
+  D. Rolfson, Knots and Links.  Publish or Perish Press, 1976.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

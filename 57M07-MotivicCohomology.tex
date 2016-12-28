@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MotivicCohomology}
+\pmcreated{2013-03-22 16:43:34}
+\pmmodified{2013-03-22 16:43:34}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{motivic cohomology}
+\pmrecord{7}{38947}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57M07}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The {\em motivic cohomology} is ``the algebraic version of singular cohomology, ... an algebraic homology-like theory built out of the
+free abelian group on the algebraic subvarieties of [a regular algebro-geometric version of a manifold] $X$, the algebraic cycles on $X$.'' (Levine, 1997) This theory devised by Alexander Grothendieck and Enrico Bombieri to derive a conditional proof of the Weil conjectures employing algebraic geometry. Its inventors expected motivic cohomology to be a total generalization of all homology theories and Pierre Deligne pointed the way with his absolute Hodge cycles.
+
+Since motivic cohomology is a type of cohomology theory defined for schemes, in particular, algebraic varieties, there are a couple of different ways to define it. The Zariski topology is so poor from an algebraic topology standpoint, alternative methods are required.
+
+The first definition of motivic cohomolgy was only for rational coefficients. Recall that in topology, one has isomorphisms
+$$ K^*(X)_\mathbb{Q} \cong \oplus_i H^i(X,\mathbb{Q})$$
+given by the Chern character. Motivic cohomology is a theory which adapts this to the algebraic setting.
+
+Actually, before this was done in topology, Grothendieck had done this for $K_0$ of schemes where the 'cohomology theory' was the Chow ring $CH^*(X)$, namely
+$$ K_0(X)_\mathbb{Q} \cong \oplus_i CH^i(X)_\mathbb{Q}$$
+Recall that the ring $CH^i(X)$ is the free abelain group of codimension $i$ subvarieties of $X$ modulo rational equivalence.
+
+Motivic cohomology was motivated by these two facts. Namely, weight zero motivic cohomology are the Chow groups, and rationally is the graded pieces (with respect to the gamma filtration) of the group $K_0(X)$. Motivic cohomology in higher weights then corresponds to Bloch's higher Chow groups, and rationally coincides with graded pieces of higher algebraic $K$-theory $K_i(X)$.
+
+If $\Delta^n$ denotes the algebraic $n$-simplex given by the single equation $t_0 + \ldots + t_n = 1$, then let $z^q(X,n)$ denote the group of algebraic cycles on $X \times \Delta^n$ of codimension $q$ which intersect each face of $\Delta^n$ properly. This intersection condition allows one to turn $z^q(X,n)$ into a simplicial abelian group in the index $q$, and hence a chain complex. The cohomology groups of this chain complex (or equivalently, the homotopy group of the simplicial abelian group) are denoted $CH^q(X,n)$ are are called higher Chow groups, and were introduced by Bloch. They provide one of the possible equivalent definitions of motivic cohomology, and one has
+
+$$ K_i(X)_\mathbb{Q} \cong \oplus_j CH^j(X,i)_\mathbb{Q}.$$
+
+Another definition comes from the work of Suslin and Voevodsky, which is more technical. For a smooth scheme of finite type over a field $k$, let $\mathbb{Z}_{tr}(X)(Y)$ denote the free abelain group of closed integral subschemes of $X \times Y$ whose support is finite and surjective over a component of $X$. Then $\mathbb{Z}_{tr}(X)$ becomes a presheaf, and is actually a sheaf in the Zariski, Nisnevich, and \'etale topologies. Then $\mathbb{Z}_{tr}(\mathbb{G}_m^{\wedge q})$ is defined to be $Z(q) = \mathbb{Z}_{tr}(\mathbb{G}_m^{\times q})$ mod out the images of $\mathbb{G}_m^{\times q-1}$ via the $q$ embeddings with one coordinate equal to $1$.
+
+For any presheaf $F$, let $C_*(F)$ denote the chain complex, where in weight $n$ we have $C_n(F)(X) = F(\Delta^n \times X)$. Then the motivic complex is given by $C_*\mathbb{Z}_{tr}(\mathbb{G}_m^{\wedge q})[-q]$, where the $[-q]$ means shift by $q$. The motivic cohomology groups are then defined to be the hypercohomology of this complexes of sheaves, taken in either the Zariski or Nisnevich topologies:
+
+$$ H^p(X,\mathbb{Z}(q)) = \mathbb{H}^p_{Zar}(X,\mathbb{Z}(q))$$
+
+Suslin has shown that the above two deifnitions of motivic cohomology agree. There are other defintions by Voevodsky, who constructed a triangulated category of motives, and a motivic homotopy category, in which motivic cohomology theory (among other theories) are representable.
+
+\begin{thebibliography}{3}
+\bibitem{ml} Marc Levine, ``Homology of algebraic varieties: An introduction to the works of Suslin and Voevodsky'', {\it Bull. Amer. Math. Soc.} {\bf 34} (1997): 297
+\bibitem{as} Anton Suslin \& Viktor Voevodsky, ``Bloch-Kato conjecture and motivic cohomology with finite coefficients'' {\it NATO ASI Series C Mathematical and Physical Sciences} {\bf 548} (2000): 117 - 192
+\bibitem{vv} Viktor Voevodsky, ``Motivic cohomology with {\bf Z}/2-coefficients". {\it Publications mathÃ©matiques Institut des hautes Ã©tudes scientifiques} (0073-8301), 98 {\bf 1} (2003): 59 - 73
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

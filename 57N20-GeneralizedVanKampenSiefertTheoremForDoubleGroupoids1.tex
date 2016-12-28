@@ -1,0 +1,489 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedVanKampenSiefertTheoremForDoubleGroupoids}
+\pmcreated{2013-03-22 19:23:01}
+\pmmodified{2013-03-22 19:23:01}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{generalized van Kampen-Siefert theorem for double groupoids}
+\pmrecord{10}{42338}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57N20}
+\pmclassification{msc}{55Q15}
+\pmclassification{msc}{55N35}
+\pmsynonym{DGvKST}{GeneralizedVanKampenSiefertTheoremForDoubleGroupoids}
+\pmdefines{$\rho$-sequence}
+\pmdefines{fundamental group}
+\pmdefines{$\pi_1(X}
+\pmdefines{x_0)$}
+\pmdefines{topological invariant}
+\pmdefines{non-commutative invariant}
+\pmdefines{fundamental double groupoid}
+\pmdefines{morphisms induced by  inclusions}
+
+% this is the default PlanetMath preamble. as your knowledge
+% of TeX increases, you will probably want to edit this, but
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+% define commands here
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\begin{document}
+\section{The Generalized van Kampen-Siefert Theorem for Double Groupoids (GDvKST)}
+
+This theorem was first published by \PMlinkexternal{Ronald Brown}{http://planetphysics.org/wiki.pl/Ronald_Brown_(mathematician)} and coworkers; please see the cited references.
+The following presentation of the GDvKST follows closely Dr. Ronald Brown's presentation.  
+\subsection{Double groupoids and connections}
+Suppose we are given a cover $\cU$ of $X$. Then the homotopy double groupoids in the following $\rho$-{\em sequence of the cover} are
+well-defined:
+\begin{equation}
+\bigsqcup _{(U,V)  \in \mathcal{U}\, ^2}
+ \hdgb(U\cap V)\;
+ \overset{a}{\underset{b}{\rightrightarrows}} \bigsqcup _{U \in \cU}\hdgb(U)
+ \labto{c} \hdgb(X ) .\label{coeq} 
+\end{equation}
+
+The morphisms $a,b$ are determined by the inclusions 
+$$a_{UV}:U\cap V\rightarrow U, b_{UV}:U\cap V\rightarrow V$$ for each $(U,V)  \in \mathcal{U}\,^2$ and 
+$c$ is determined by the inclusion $c_U:U\rightarrow X$ for each $U \in \cU$.
+
+The next section presents without proof the generalization of the {\em van Kampen-Siefert theorem for double groupoids} that was first proven by Professor Ronald Brown et al; for further details the reader is referred to the original articles listed in the following Bibliography. 
+
+\subsection{GDvKS Theorem for Double Groupoids}
+
+The following is a statement of the Generalized van Kampen Theorem (GvKT) expressed in terms of Double Groupoids with connections as developed and proven in ref. \cite{BHKP}.
+
+\begin{thm}[Generalized van Kampen theorem for double groupoids] 
+
+{\em If the interiors of the sets of $\cU $ cover $X$, then in the above 
+$\rho$-sequence of the cover, $c$ is the coequaliser of $a,b$ in the category of double groupoids with connections.} 
+\end{thm}
+
+A special case of this result is when $\cU$ has two elements. In this case the coequaliser reduces to a pushout.
+
+{\bf Proof.} The reader is referred to Brown et al.(2004a), \cite{BHKP} for the complete proof of the generalized van Kampen theorem.
+
+
+Note that this theorem is a generalization of an analogous Van Kampen theorem for the fundamental group \cite {Brown1}. From this theorem, one can compute a particular fundamental group $\pi_1(X,x_0)$ using combinatorial information on the graph of intersections of path components of $U,V,W$, but for this it is useful to develop the algebra of groupoids. Notice two special features of this result:
+
+\noindent (i) The computation of the  {\em topological invariant} one wants to obtain the {\em fundamental group}, is obtained from the computation of a larger structure, and so part of the work is to give {\em methods for computing the smaller structure from the larger one}. This usually involves non-canonical choices, such as that of a maximal tree in a connected graph. The previous work on applying groupoids to groups gives many examples of such methods \cite {brownbook:2}.
+
+
+\noindent (ii) The fact that the computation can be done is surprising in two ways:
+ (a) The fundamental group is computed {\em precisely}, even though the information for 
+it uses input in two dimensions, namely $0$ and 1. This is contrary to the experience in
+homological algebra and algebraic topology, where the interaction of several dimensions involves 
+exact sequences or spectral sequences, which give information only up to extension,  and: 
+
+ (b) the result is a {\em non-commutative invariant}, which is usually even more difficult to 
+compute precisely.
+
+
+The reason for this success seems to be that the fundamental groupoid $\pi_1(X,X_0)$ contains 
+information in \emph{dimensions 0 and 1}, and therefore it can adequately reflect the geometry 
+of the intersections of the path components of $U,V,W$ and the morphisms induced by the 
+inclusions of $W$ in $U$ and $V$. This fact also suggested the question of whether such 
+methods could be extended successfully to {\em higher dimensions}.
+
+\begin{thebibliography}{99}
+
+\bibitem{alagl:thesis}
+F.~Al-Agl, 1989, {\em Aspects of multiple categories\/}, Ph.D. Thesis, University of Wales, Bangor.
+
+\bibitem{ABS}
+F.A. Al-Agl, R. Brown and R. Steiner, Multiple categories:the equivalence of a globular and a cubical approach, 
+{\em Advances in Maths.} {\bf 170} (2002) 71-118.
+
+\bibitem{AS}
+E. M. Alfsen and F. W. Schultz : \emph{Geometry of Spaces of Operator Algebras}, Birk\"auser, Boston--Basel--Berlin (2003).
+
+\bibitem{Anandan}
+J. Anandan : The geometric phase, \emph{Nature} \textbf{360}(1992), 307--313.
+
+\bibitem{antolini:thesis}
+R.~Antolini, 1996, {\em Cubical structures and homotopy theory\/},
+Ph.D. thesis, Univ. Warwick, Coventry.
+
+\bibitem{ashley}
+N.~Ashley, {\em Simplicial $T$-Complexes: a non abelian version of a theorem of Dold-Kan},
+Dissertationes Math., 165, (1988), 11 -- 58.
+
+\bibitem{Attal}
+R. Attal : Two--dimensional parallel transport: combinatorics and functionality, arXiv:math-ph/0105050
+
+\bibitem{Baez1}
+J. Baez. 2004. Quantum quandaries : a category theory perspective, in \emph{`Structural
+Foundations of Quantum Gravity}', (ed. S. French et al.) Oxford Univ. Press.
+
+\bibitem{Baez2}
+J. Baez. 2002. Categorified Gauge Theory. in Proceedings of the Pacific Northwest Geometry
+Seminar Cascade Topology Seminar,Spring Meeting--May 11 and 12, 2002. University of 
+Washington, Seattle, WA.
+
+\bibitem{BGGB05}
+I.C. Baianu, James Glazebrook, G. Georgescu and Ronald Brown. 2005a.``Generalized 'Topos' 
+Represntations of Quantum Space-Time: Linking Quantum N-Valued Logics with Categories and 
+Higher Dimensional Algebra.", (\emph{manuscript in preparation})
+
+\bibitem{ICB3} 
+I.C. Baianu. 1971a. Organismic Supercategories and Qualitative Dynamics of Systems. The 
+Bulletin of Mathematical Biophysics, 33(3):339--354.
+
+\bibitem{ICB4}
+I.C. Baianu. 1971b. "Categories, Functors and Quantum Algebraic Computations", Proceed. Fourth 
+Intl. Congress LMPS, September 1--4, 1971, Buch.
+
+\bibitem{ICB77}
+Baianu, I.C. 1977. ``A Logical Model of Genetic Activities in \Textsl{\L}ukasiewicz Algebras: 
+The Non-linear Theory." \emph{Bulletin of Mathematical Biology}, 39:249-258 (1977).
+
+\bibitem{ICB87}
+Baianu, I.C. 1987. ``Computer Models and Automata Theory in Biology and Medicine" (A Review). 
+In: \emph{"Mathematical Models in Medicine.}",vol.7., M. Witten, Ed., Pergamon Press: New 
+York, pp.1513-1577.
+
+ \bibitem{BGGBa}
+Baianu, I.C., J. Glazebrook, G. Georgescu and R.Brown. 2005b. ``A Novel Approach to Complex
+Systems Biology based on Categories, Higher Dimensional Algebra and A Generalized
+\Textsl{\L}ukasiewicz Topos. " , \emph{Manuscript in preparation}, 46 pp.
+
+\bibitem{ICB5} 
+I.C. Baianu and D. Scripcariu. 1973.\emph{On Adjoint Dynamical Systems}. \emph{The Bulletin of %%@
+Mathematical Biophysics}, \textbf{35}(4):475--486.
+
+\bibitem{Bak}
+A. Bak, R. Brown, G. Minian and T. Porter: Global actions, groupoid atlases and related 
+topics, http://citeseer.ist.psu.edu/bak00global.html
+
+
+\bibitem{baues1}
+H.~J. Baues, 1989, {\em Algebraic Homotopy\/}, volume~15 of {\em Cambridge  Studies in Advanced Mathematics},
+ Cambridge Univ. Press.
+
+\bibitem{babr}
+H.~J. Baues and R.~Brown, {\em On relative homotopy groups of the
+product filtration, the {J}ames construction, and a formula of {H}opf\/}, J. Pure
+  Appl. Algebra, 89, (1993), 49--61, ISSN 0022-4049.
+
+\bibitem{bauesT1}
+H.-J. Baues and A.~Tonks, {\em On the twisted cobar construction}, 
+Math.  Proc. Cambridge Philos. Soc., 121, (1997), 229--245.
+
+\bibitem{BGV}
+N. Berline, E. Getzler and M. Vergne : Heat kernels and Dirac
+operators, Grund. der math. Wissenschaften \textbf{298}, Springer
+Verlag 1991.
+
+\bibitem{Brown1}
+R. Brown : Groupoids and crossed objects in algebraic topology,
+\emph{Homology, Homotopy and Appl.} \textbf{1} (1999), 1--78.
+
+\bibitem{Brown04b}
+R. Brown. Crossed complexes and homotopy groupoids as non commutative tools for higher 
+dimensional local-to-global problems, Proceedings of the Fields Institute Workshop on 
+Categorical Structures for Descent and Galois Theory, Hopf Algebras and Semiabelian 
+Categories, September 23-28, 2002, Contemp. Math. (2004). 30pp  
+
+
+\bibitem{BHKP}
+R. Brown, K.A. Hardie, K.H. Kamps  and T. Porter, A homotopy double groupoid of a Hausdorff 
+space, {\em ``Theory and Applications of Categories"} \textbf{10} (2002) 71-93.
+
+\bibitem{BH} R. Brown  and P.J. Higgins, On the connection between the second relative %%@
+homotopy groups of some related spaces,  {\em Proc. London Math. Soc.} \textbf{ (3) 36} %%@
+(1978), 193-212.
+
+\bibitem{BH2} R. Brown and P.J. Higgins, On the algebra of cubes, {\em J. Pure Applied %%@
+Algebra} \textbf{21 }(1981), 233--260.
+
+\bibitem{colimits} R. Brown  and P.J. Higgins, Colimit theorems for relative homotopy groups', %%@
+{\em J. Pure Appl. Algebra} \textbf{22} (1981) 11-41.
+
+\bibitem{BM} 
+R. Brown  and G.H. Mosa, Double categories, thin structures and connections,{\it %%@
+Theory and Applications of Categories}  {\bf 5} (1999), 163-175.
+
+\bibitem{BS:double}  
+R. Brown,  and C.B. Spencer, Double groupoids and crossed modules, {\it 
+Cahiers Top. G\'eom.Diff.} {\bf 17} (1976) 343-362.
+
+\bibitem {Brown}
+R. Brown.2002.\emph{Categorical Structures for Descent and Galois Theory}. Fields Institute, September 23-28, 2002.
+
+\bibitem{BG1}
+R. Brown and J. F. Glazebrook : Connections, local subgroupoids and a holonomy Lie groupoid of a line bundle gerbe, arXiv:math. DG/0210322 \emph{Univ. Iagel. Acta Math.} (2003) (to appear).
+
+
+\bibitem{BI1}
+R. Brown and $\dot{\rm I}$cen : Lie local subgroupoids and their holonomy and monodromy Lie groupoids,
+\emph{Top. Appl.} \textbf{115} (2001), 125--138.
+
+
+\bibitem{BrownBook}
+R. Brown: ``{\em Topology: a geometric account of general topology, homotopy types and 
+the fundamental groupoid}", Ellis Horwood,Chichester, Prentice Hall, New York, 1988.
+
+\bibitem{BrownBook2}
+R. Brown: ``{\em Nonabelian Algebraic Topology, 2011}" ,(\emph{EMS}, 708 pages.
+
+\bibitem{BM}
+R. Brown and O. Mucuk : Foliations, locally Lie groupoids and holonomy, \emph{Cah. Top. G\'eom. Diff. Cat.} {\bf 37} (1996), 61--71.
+
+
+\bibitem{BIM}
+R. Brown,  $\dot{\rm I}cen$ and O. Mucuk : Local
+subgroupoids II : Examples and properties. \emph{Top. Appl.}
+{\bf 127} (2003), 393--408.
+
+\bibitem{brown:gpdsvkt67}
+R.~{B}rown, {\em Groupoids and {van Kampen}'s Theorem}, 3,(1967), 385--340.
+
+\bibitem{rb:second80}
+R.~Brown, {\em On the second relative homotopy group of an
+adjunction space: an exposition of a theorem of {J}. {H}. {C}. {W}hitehead}, J. London Math.
+  Soc. (2), 22, (1980), 146--152, ISSN 0024-6107.
+
+\bibitem{rb:coproducts}
+R.~Brown, {\em Coproducts of crossed {$P$}-modules: applications
+to second homotopy groups and to the homology of groups}, Topology, 23, (1984),337--345.
+
+\bibitem{brown:survey}
+R.~Brown, {\em From groups to groupoids: a brief survey}, Bull.London Math.  Soc., 19, (1987), 113--134, ISSN 0024-6093.
+
+\bibitem{brownbook:2}
+R.~Brown, 1988, {\em Topology}, Ellis Horwood Series:
+Mathematics and its Applications, Ellis Horwood Ltd., Chichester, second edition, a geometric %%@
+account of general topology, homotopy types and the fundamental groupoid.
+
+\bibitem{brown:adams}
+R.~Brown, 1992, {\em Computing homotopy types using crossed
+{$n$}-cubes of  groups}, in {\em Adams Memorial Symposium on Algebraic Topology, 1
+  (Manchester, 1990)}, volume 175 of {\em London Math. Soc. Lecture Note
+  Ser.\/},  187--210, Cambridge Univ. Press, Cambridge.
+
+\bibitem{br:gilbert}
+R.~Brown and N.~D. Gilbert, {\em Algebraic models of {$3$}-types and automorphism structures for crossed modules}, Proc. London Math. Soc. (3),  59, (1989), 51--73, ISSN 0024-6115.
+
+\bibitem{br-gl1}
+R.~Brown and J.~F. Glazebrook, {\em Connections, local subgroupoids, and a   holonomy Lie groupoid of a line bundle gerbe}, University of Wales, Bangor,   Math Preprint, 02.22, (2002), 10 pages.
+
+\bibitem{BGPT:Iindag}
+R.~Brown, M.~Golasi{\'n}ski, T.~Porter and A.~Tonks, {\em Spaces
+of maps into classifying spaces for equivariant crossed complexes}, Indag. Math. (N.S.),
+  8, (1997), 157--172, ISSN 0019-3577.
+
+\bibitem{BGPT:IIK-theory}
+R.~Brown, M.~Golasi{\'n}ski, T.~Porter and A.~Tonks, {\em Spaces
+of maps into classifying spaces for equivariant crossed complexes. {II}. {T}he general %%@
+topological group case}, $K$-Theory, 23, (2001), 129--155, ISSN 0920-3036.
+
+\bibitem{bh1978}
+R.~Brown and P.~J. Higgins, {\em On the connection between the
+second relative homotopy groups of some related spaces\/}, Proc.London Math. Soc., (3) 36, %%@
+(1978), 193--212.
+
+\bibitem{bh:CR2}
+R.~Brown and P.~J. Higgins, {\em Sur les complexes crois\'es
+d'homotopie associ\'es \`a quelques espaces filtr\'es}, C. R. Acad. Sci. Paris S\'er. A-B, %%@
+286, (1978), A91--A93, ISSN 0151-0509.
+
+%\bibitem{bh:algcub}
+%R.~Brown and P.~J. Higgins, {\em The algebra of cubes\/}, J. Pure
+%Appl. Alg., 21, (1981), 233--260.
+
+\bibitem{bh:colimits}
+R.~Brown and P.~J. Higgins, {\em Colimit theorems for relative
+homotopy groups\/}, J. Pure Appl. Alg, 22, (1981), 11--41.
+
+\bibitem{bh1981a}
+R.~Brown and P.~J. Higgins, {\em The equivalence of crossed complexes and  $\omega$-groupoids}, Cahiers Top. G\'{e}om. Diff., 22, (1981), 370 -- 386.
+
+\bibitem{bh:tens}
+R.~Brown and P.~J. Higgins, {\em Tensor products and homotopies
+for $\omega$-groupoids and crossed complexes}, J. Pure Appl. Alg, 47, (1987),
+  1--33.
+
+\bibitem{bh:chn}
+R.~Brown and P.~J. Higgins, {\em Crossed complexes and chain complexes with
+  operators}, Math. Proc. Camb. Phil. Soc., 107, (1990), 33--57.
+
+\bibitem{bh:class91}
+R.~Brown and P.~J. Higgins, {\em The classifying space of a crossed complex},
+  Math. Proc. Cambridge Philos. Soc., 110, (1991), 95--120, ISSN 0305-0041.
+
+\bibitem{bh:cubabgp3}
+R.~Brown and P.~J. Higgins, 2002, {\em Cubical abelian groups withconnections are equivalent to chain complexes}, Technical Report 02.24.
+
+\bibitem{brownhuebschmann}
+R.~Brown and J.~Huebschmann, 1982, {\em Identities among
+relations}, in:  R.Brown and T.L.Thickstun, eds., {\em Low Dimensional Topology}, London
+  Math. Soc Lecture Notes, Cambridge University Press.
+
+\bibitem{br-icen:2-dhol}
+R.~Brown and ~{I}cen, {\em Towards two dimensional holonomy},
+Advances in Mathematics,  (to appear).
+
+\bibitem{brownjan:vkt}
+R.~Brown and G.~Janelidze.:1997, {\em Van {K}ampen theorems for categories of covering morphisms in lextensive categories}, \emph{J. Pure Appl. Algebra}, \textbf{119}:  255--263, ISSN 0022-4049.
+
+\bibitem{brlo:hur}
+R.~Brown and J.-L. Loday, {\em Homotopical excision, and Hurewicz theorems, for $n$-cubes of spaces}, Proc. London Math. Soc., (3)54, (1987), 176 -- 192.
+
+\bibitem{brlo:vkt}
+R.~Brown and J.-L. Loday, {\em Van Kampen Theorems for diagrams of spaces\/}, Topology, 26, (1987), 311 -- 337.
+
+\bibitem{brmopw}
+R.~Brown, E.~Moore, T.~Porter and C.~Wensley, {\em Crossed
+complexes, and free crossed resolutions for amalgamated sums and HNN-extensions of groups},
+  Georgian Math. J., 9, (2002), 623--644.
+
+\bibitem{brownmosa}
+R.~Brown and G.~H. Mosa, {\em Double categories, {$2$}-categories, thin structures and connections}, Theory Appl. Categ., 5, (1999), No. 7,
+  163--175 (electronic), ISSN 1201-561X.
+
+\bibitem{BRazak:LMS99}
+R.~Brown and A.~Razak~Salleh, {\em Free crossed resolutions of groups and presentations of modules of identities among relations}, LMS J. Comput.  Math., 2, (1999), 28--61 (electronic), ISSN 1461-1570.
+
+\bibitem{brownspenc:double}
+R.~Brown and C.~B. Spencer, {\em Double groupoids and crossed
+modules\/}, Cahiers Topologie G\'eom. Diff\'erentielle, 17, (1976), 343--362.
+
+\bibitem{brownspenc:g-gr}
+R.~Brown and C.~B. Spencer, {\em $G$-groupoids, crossed modules
+and the fundamental groupoid of a topological group}, Proc. Kon. Ned. Akad. v. Wet,
+  79, (1976), 296 -- 302.
+
+\bibitem{brownwens:ind}
+R.~Brown and C.~D. Wensley, {\em On finite induced crossed modules, and the homotopy {$2$}-type of mapping cones}, Theory Appl. Categ., 1, (1995), No. 3, 54--70 (electronic), ISSN 1201-561X.
+
+\bibitem{brownwens:normal}
+R.~Brown and C.~D. Wensley, {\em Computing crossed modules induced by an inclusion of a normal subgroup, with applications to homotopy {$2$}-types},  Theory Appl. Categ., 2, (1996), No. 1, 3--16 (electronic), ISSN 1201-561X.
+
+\bibitem{brownwens:comp}
+R.~Brown and C.~D. Wensley, {\em Computations and homotopical
+applications of induced crossed modules\/}, J. Symb. Comp.,  (to appear), ISSN 1201-561X.
+
+\bibitem{BungeL}
+M.~Bunge and S.~Lack, {\em Van Kampen theorems for toposes}, Advances in Mathematics.
+
+\bibitem{Cech1}
+E.~{{\^C}}ech, 1933, {\em H{\"o}herdimensionale
+{H}omotopiegruppen\/}, in {\em   Verhandlungen des Internationalen Mathematiker-Kongresses Zurich 1932\/},
+volume~2,  203, International Congress of Mathematicians (4th : 1932. Zurich, Switzerland, Walter Saxer, 
+Zurich, reprint Kraus, Nendeln, Liechtenstein, 1967.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

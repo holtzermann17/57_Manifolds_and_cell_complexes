@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DifferentiableFunctionsAreContinuous}
+\pmcreated{2013-03-22 14:35:27}
+\pmmodified{2013-03-22 14:35:27}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{differentiable functions are continuous}
+\pmrecord{8}{36154}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R35}
+\pmclassification{msc}{26A24}
+\pmrelated{DifferentiableFunctionsAreContinuous2}
+\pmrelated{LimitsOfNaturalLogarithm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{prop}
+Suppose $I$ is an open interval on $\mathbb{R}$,
+and $f\colon I\to \sC$ is differentiable at $x\in I$. Then
+$f$ is continuous at $x$. Further, if $f$ is differentiable on $I$,
+then $f$ is continuous on $I$.
+\end{prop}
+                                                                                
+\begin{proof}
+Suppose $x\in I$. Let us show that
+$f(y)\to f(x)$, when $y\to x$. First, if $y\in I$ is distinct to $x$,
+then
+$$
+  f(x)-f(y) = \frac{f(x)-f(y)}{x-y} (x-y).
+$$
+Thus, if $f'(x)$ is the derivative of $f$ at $x$, we have
+\begin{eqnarray*}
+\lim_{y\to x} f(x)-f(y) &=& \lim_{y\to x} \frac{f(x)-f(y)}{x-y} (x-y) \\
+   &=& \lim_{y\to x} \frac{f(x)-f(y)}{x-y}\  \lim_{y\to x}  (x-y) \\
+   &=& f'(x)\  0 \\
+   &=& 0,
+\end{eqnarray*}
+where the second equality is justified since both limits on the second line
+exist. The second claim follows since $f$ is continuous on $I$ if and only
+if $f$ is continuous at $x$ for all $x\in I$.  
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

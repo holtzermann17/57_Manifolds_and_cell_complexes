@@ -1,0 +1,190 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Orientation1}
+\pmcreated{2013-03-22 12:56:24}
+\pmmodified{2013-03-22 12:56:24}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{orientation}
+\pmrecord{15}{33297}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57N99}
+\pmrelated{ThomClass}
+\pmdefines{orientable}
+\pmdefines{oriented}
+\pmdefines{orientable manifold}
+\pmdefines{oriented manifold}
+\pmdefines{fundamental class}
+\pmdefines{orientation class}
+\pmdefines{local orientation}
+
+%\documentclass{amsart}
+\usepackage{amsmath}
+%\usepackage[all,poly,knot,dvips]{xy}
+%\usepackage{pstricks,pst-poly,pst-node,pstcol}
+
+
+\usepackage{amssymb,latexsym}
+
+\usepackage{amsthm,latexsym}
+\usepackage{eucal,latexsym}
+
+% THEOREM Environments --------------------------------------------------
+
+\newtheorem{thm}{Theorem}
+ \newtheorem*{mainthm}{Main~Theorem}
+ \newtheorem{cor}[thm]{Corollary}
+ \newtheorem{lem}[thm]{Lemma}
+ \newtheorem{prop}[thm]{Proposition}
+ \newtheorem{claim}[thm]{Claim}
+ \theoremstyle{definition}
+ \newtheorem{defn}[thm]{Definition}
+ \theoremstyle{remark}
+ \newtheorem{rem}[thm]{Remark}
+ \numberwithin{equation}{subsection}
+
+
+%---------------------  Greek letters, etc ------------------------- 
+
+\newcommand{\CA}{\mathcal{A}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\CM}{\mathcal{M}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\BC}{\mathbb{C}}
+\newcommand{\BN}{\mathbb{N}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\FF}{\mathfrak{F}}
+\newcommand{\FL}{\mathfrak{L}}
+\newcommand{\FM}{\mathfrak{M}}
+\newcommand{\Ga}{\alpha}
+\newcommand{\Gb}{\beta}
+\newcommand{\Gg}{\gamma}
+\newcommand{\GG}{\Gamma}
+\newcommand{\Gd}{\delta}
+\newcommand{\GD}{\Delta}
+\newcommand{\Ge}{\varepsilon}
+\newcommand{\Gz}{\zeta}
+\newcommand{\Gh}{\eta}
+\newcommand{\Gq}{\theta}
+\newcommand{\GQ}{\Theta}
+\newcommand{\Gi}{\iota}
+\newcommand{\Gk}{\kappa}
+\newcommand{\Gl}{\lambda}
+\newcommand{\GL}{\Lamda}
+\newcommand{\Gm}{\mu}
+\newcommand{\Gn}{\nu}
+\newcommand{\Gx}{\xi}
+\newcommand{\GX}{\Xi}
+\newcommand{\Gp}{\pi}
+\newcommand{\GP}{\Pi}
+\newcommand{\Gr}{\rho}
+\newcommand{\Gs}{\sigma}
+\newcommand{\GS}{\Sigma}
+\newcommand{\Gt}{\tau}
+\newcommand{\Gu}{\upsilon}
+\newcommand{\GU}{\Upsilon}
+\newcommand{\Gf}{\varphi}
+\newcommand{\GF}{\Phi}
+\newcommand{\Gc}{\chi}
+\newcommand{\Gy}{\psi}
+\newcommand{\GY}{\Psi}
+\newcommand{\Gw}{\omega}
+\newcommand{\GW}{\Omega}
+\newcommand{\Gee}{\epsilon}
+\newcommand{\Gpp}{\varpi}
+\newcommand{\Grr}{\varrho}
+\newcommand{\Gff}{\phi}
+\newcommand{\Gss}{\varsigma}
+\newcommand{\n}{\newline}
+\def\co{\colon\thinspace}
+\begin{document}
+There are many definitions of an orientation of a manifold. The most
+general, in the sense that it doesn't require any extra
+\PMlinkescapetext{structure} on the manifold, is based on
+(co-)homology theory. For this article manifold means a connected,
+{\em topological} manifold possibly with boundary.
+\begin{thm} Let $M$ be a closed, $n$--dimensional
+  \emph{manifold}. Then $H_n(M\,;\mathbb{Z})$ the top dimensional
+  homology group of $M$, is either trivial ($\{0\}$) or isomorphic
+  to $ \mathbb{Z}$.
+\end{thm}
+
+\begin{defn} A closed  $n$--manifold is called \emph{orientable} if its top
+ homology group is isomorphic to the integers.
+  An \emph{orientation} of  $M$ is a choice of a particular isomorphism
+   $$\mathfrak{o}\co \mathbb{Z} \to H_n(M\,;\mathbb{Z}).$$
+An oriented manifold is a (necessarily orientable) manifold $M$ endowed with 
+an orientation. 
+If $(M,\mathfrak{o})$ is an oriented manifold then  $\mathfrak{o}(1)$ is called
+the \emph{fundamental class} of $M$ , or the \emph{orientation class} of $M$, and is denoted
+ by $[M]$.
+\end{defn}
+
+\begin{rem} Notice that since $\mathbb{Z}$ has exactly two
+  automorphisms an orientable manifold admits two possible
+  orientations.
+\end{rem}
+
+\begin{rem} The above definition could be given using cohomology instead of homology. 
+\end{rem}
+
+The top dimensional homology of a non-closed manifold is always
+trivial, so it is trickier to define orientation for those
+beasts. One approach (which we will not follow) is to use special
+kind of homology (for example relative to the boundary for compact
+manifolds with boundary). The approach we follow defines (global)
+orientation as compatible fitting together of local orientations. We
+start with manifolds without boundary.
+
+\begin{thm}Let $M$ be an $n$-manifold without boundary and $x\in
+  M$. Then the relative homology group
+          $$H_n(M,M\setminus x\,;\mathbb{Z}) \cong \mathbb{Z}$$
+\end{thm}
+\begin{defn} Let $M$ be an $n$-manifold and $x\in M$. An  {\em orientation 
+of} $M$  {\em at} $x$  is a choice of an isomorphism 
+ $$\mathfrak{o}_x \co \mathbb{Z} \to H_n(M,M\setminus x\,;\mathbb{Z}).$$
+  \end{defn}
+
+  \PMlinkescapetext{One way} to make precise the notion of nicely
+  fitting together of orientations at points, is to require that for
+  nearby points the orientations are defined in a
+  \PMlinkescapetext{uniform} way.
+  \begin{thm}
+    Let $U$ be an open subset of $M$ that is homeomorphic to $\BR^n$
+    (e.g. the domain of a chart).  Then,
+ $$H_n(M,M\setminus U \,; \BZ)\cong \BZ.$$
+\end{thm}
+
+\begin{defn} Let $U$ be an open subset of $M$ that is homeomorphic
+  to $\BR^n$. A \emph{local orientation} of $M$ on $U$ is a choice
+  of an isomorphism
+ $$\mathfrak{o}_U \co H_n(M,M\setminus U \,; \BZ) \to \BZ.$$
+\end{defn}
+
+Now notice that with $U$ as above and $x\in U$ the inclusion
+  $$\imath^U_x\co M\setminus U  \hookrightarrow  M\setminus x$$
+\PMlinkescapetext{induces} a map (actually isomorphism) 
+      $$\imath^U_{x\,\,*}\co H_n(M,M\setminus U \,; \BZ) \to H_n(M,M\setminus x\,;\mathbb{Z})$$
+      and therefore a local orientation at $U$
+      \PMlinkescapetext{induces} (by composing with the above
+      isomorphism) an orientation at each point $x\in U$.  It is
+      \PMlinkescapetext{natural} to declare that all these
+      orientations fit nicely together.
+
+
+
+\begin{defn}
+  Let $M$ be a manifold with non-empty boundary, $\partial M\neq
+  \emptyset$. $M$ is called \emph{orientable} if its double
+     $$\hat{M}:=M\bigcup_{\partial M}M$$
+is orientable, where $\bigcup_{\partial M}$ denotes gluing along the boundary.\n
+An orientation of $M$ is determined by an orientation of $\hat{M}$.    
+\end{defn}
+%%%%%
+%%%%%
+\end{document}

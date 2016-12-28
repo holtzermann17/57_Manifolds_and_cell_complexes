@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Diffeotopy}
+\pmcreated{2013-03-22 14:52:43}
+\pmmodified{2013-03-22 14:52:43}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{diffeotopy}
+\pmrecord{9}{36556}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R50}
+\pmdefines{isotopic}
+\pmdefines{diffeotopic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $M$ be a manifold and $I=[0,1]$ the closed unit interval.  A smooth map $h\colon M\times I\rightarrow M$ is called a \emph{diffeotopy} (on $M$) if for every $t\in I$: $$h_t:=h(-,t)\colon M\rightarrow M$$ is a diffeomorphism.
+
+Two diffeomorphisms $f,g\colon M\to M$ are said to be \emph{diffeotopic} if there is a diffeotopy $h\colon M\times I\to M$ such that 
+\begin{enumerate}
+\item $h_0=f$, and
+\item $h_1=g$.
+\end{enumerate}
+
+\textbf{Remark}.  Diffeotopy is an equivalence relation among diffeomorphisms.  In particular, those diffeomorphisms that are diffeotopic to the identity map form a group.
+
+Two points $a,b\in M$ are said to be \emph{isotopic} if there is a diffeotopy $h$ on $M$ such that 
+\begin{enumerate}
+\item $h_0=id_M$, the identity map on $M$, and
+\item $h_1(a)=b$.
+\end{enumerate}
+
+\textbf{Remark}.  If $M$ is a connected manifold, then every pair of points on $M$ are isotopic.
+
+Pairs of isotopic points in a manifold can be generazlied to pairs of isotopic sets.  Two arbitrary sets $A,B\subseteq M$ are said to be \emph{isotopic} if there is a diffeotopy $h$ on $M$ such that 
+\begin{enumerate}
+\item $h_0=id_M$, and
+\item $h_1(A)=B$.
+\end{enumerate}
+
+\textbf{Remark}.  One special example of isotopic sets is the isotopy of curves.  In $\mathbb{R}^3$, curves that are isotopic to the unit circle are the trivial knots.
+%%%%%
+%%%%%
+\end{document}

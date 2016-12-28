@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FunctionDifferentiableAtOnlyOnePoint}
+\pmcreated{2013-03-22 15:48:16}
+\pmmodified{2013-03-22 15:48:16}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{function differentiable at only one point}
+\pmrecord{6}{37767}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R35}
+\pmclassification{msc}{26A24}
+\pmrelated{FunctionContinuousAtOnlyOnePoint}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Let $f\colon \R\to \R$ be the function 
+$$
+f(x) = \begin{cases} x, & \mbox{when $x$ is rational}, \\
+-x, & \mbox{when $x$ is irrational}.
+\end{cases}
+$$
+See \PMlinkname{this entry}{FunctionContinuousAtOnlyOnePoint}.
+Let $g\colon \R\to \R$ be the function
+$$ 
+  g(x) = f(x) x.
+$$
+Then $g$ differentiable at $0$,
+but everywhere else non-differentiable.
+
+Indeed, since
+\begin{eqnarray*}
+  g'(0) &=& \lim_{h\to 0} \frac{f(h)h-f(0)0}{h} \\
+        &=& \lim_{h\to 0} f(h) \\
+        &=& 0
+\end{eqnarray*}
+$g$ is differentiable at $0$. 
+If $g$ would be continuous at $x\neq 0$, then $f(x)=g(x)/x$ 
+would be continuous at $x$. 
+\PMlinkname{This result}{DifferentiableFunctionsAreContinuous}
+implies that $g$ is non-differentiable away from the origin.
+%%%%%
+%%%%%
+\end{document}

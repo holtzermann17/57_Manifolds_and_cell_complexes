@@ -1,0 +1,554 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopicsInAlgebraicTopology}
+\pmcreated{2013-03-22 18:23:42}
+\pmmodified{2013-03-22 18:23:42}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{topics in algebraic topology}
+\pmrecord{82}{41041}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R19}
+\pmclassification{msc}{57N65}
+\pmclassification{msc}{11F23}
+\pmclassification{msc}{11E72}
+\pmclassification{msc}{18-00}
+\pmclassification{msc}{55N30}
+\pmclassification{msc}{55N15}
+\pmclassification{msc}{55N99}
+\pmclassification{msc}{55N40}
+\pmclassification{msc}{55N20}
+\pmclassification{msc}{55-01}
+\pmsynonym{category theory}{TopicsInAlgebraicTopology}
+\pmsynonym{algebraic geometry}{TopicsInAlgebraicTopology}
+\pmsynonym{topology and groupoids}{TopicsInAlgebraicTopology}
+%\pmkeywords{homology and cohomology theory}
+%\pmkeywords{fundamental functor}
+%\pmkeywords{fundamental groupoid functor}
+%\pmkeywords{groupoid category}
+%\pmkeywords{algebroid category}
+%\pmkeywords{crossed complexes}
+%\pmkeywords{complex modules}
+%\pmkeywords{homology groups and groupoids. homotopy theory}
+%\pmkeywords{groupoids}
+%\pmkeywords{categorical algebra}
+%\pmkeywords{topological categ}
+\pmrelated{Category}
+\pmrelated{Functor}
+\pmrelated{GrothendieckGroup}
+\pmrelated{NoncommutativeGeometry}
+\pmrelated{TopologicalGroup2}
+\pmrelated{Naturaltransformation}
+\pmrelated{AlgebraicTopology}
+\pmrelated{AlgebraicGeometry}
+\pmrelated{CategoricalOntologyABibliographyOfCategoryTheory}
+\pmrelated{IndexOfCategories}
+\pmrelated{OverviewOfTheContentOfPlanetMath}
+\pmrelated{CategoryOf}
+
+% this is the default PlanetMath preamble.  as your 
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\begin{document}
+\section{Algebraic topology topics}
+
+
+\subsection{Introduction}
+\emph{Algebraic topology} (AT) utilizes algebraic approaches to solve topological problems,
+such as the classification of surfaces, proving duality theorems for manifolds and 
+approximation theorems for topological spaces. A central problem in algebraic topology 
+is to find algebraic invariants of topological spaces, which is usually carried out by means
+of homotopy, homology and cohomology groups. There are close connections between algebraic topology, 
+\PMlinkname{Algebraic Geometry (AG)}{AlgebraicGeometry}, and Non-commutative Geometry/NAAT. On the other hand, there are also close ties between algebraic geometry and number 
+theory. 
+
+
+\subsection{Outline}
+\begin{enumerate}
+
+\item Homotopy theory and fundamental groups
+\item Topology and groupoids; \PMlinkname{van Kampen theorem}{VanKampensTheorem} 
+\item Homology and cohomology theories
+\item Duality
+\item Category theory applications in algebraic topology
+\item Index of categories, functors and natural transformations
+\item \PMlinkexternal{Grothendieck's Descent theory}{http://www.uclouvain.be/17501.html}
+\item `Anabelian geometry'
+\item Categorical Galois theory
+\item Higher dimensional algebra (HDA)
+\item Quantum algebraic topology (QAT)
+\item Quantum Geometry
+\item Non-Abelian algebraic topology (NAAT)
+\end{enumerate}
+
+\subsection{Homotopy theory and fundamental groups}
+\begin{enumerate}
+\item Homotopy
+\item Fundamental group of a space
+\item Fundamental theorems
+\item van Kampen theorem
+\item Whitehead groups, torsion and towers
+\item Postnikov towers
+\end{enumerate}
+
+
+\subsection{Topology and Groupoids}
+\begin{enumerate}
+\item Topology definition, axioms and basic concepts
+\item Fundamental groupoid
+\item Topological groupoid
+\item van Kampen theorem for groupoids
+\item Groupoid pushout theorem 
+\item Double groupoids and crossed modules
+\item new4
+
+\end{enumerate}
+
+
+\subsection{Homology theory}
+\begin{enumerate}
+
+\item Homology group
+\item Homology sequence
+\item Homology complex
+\item new4
+
+\end{enumerate}
+
+
+\subsection{Cohomology theory}
+\begin{enumerate}
+
+\item Cohomology group
+\item Cohomology sequence
+\item DeRham cohomology
+\item new4
+
+\end{enumerate}
+
+
+
+\subsection{Duality in algebraic topology and category theory}
+\begin{enumerate}
+
+\item Tanaka-Krein duality
+\item Grothendieck duality
+\item Categorical duality
+\item Tangled duality
+\item DA5
+\item DA6
+\item DA7
+
+\end{enumerate}
+
+\subsection{Category theory applications}
+\begin{enumerate}
+\item Abelian categories
+\item Topological category
+\item Fundamental groupoid functor
+\item Categorical Galois theory
+\item Non-Abelian algebraic topology
+\item Group category
+\item Groupoid category
+\item $\mathcal{T}op$ category
+\item Topos and topoi axioms
+\item Generalized toposes
+\item Categorical logic and algebraic topology
+\item Meta-theorems
+\item Duality between spaces and algebras
+
+\end{enumerate}
+
+
+\subsection{Index of categories}
+The following is a listing of categories relevant to algebraic topology:
+
+\begin{enumerate}
+\item \PMlinkexternal{Algebraic categories}{http://www.uclouvain.be/17501.html}
+\item Topological category
+\item Category of sets, Set
+\item Category of topological spaces
+\item Category of Riemannian manifolds
+\item Category of CW-complexes
+\item Category of Hausdorff spaces
+\item Category of Borel spaces
+\item Category of CR-complexes
+\item Category of graphs
+\item Category of spin networks
+\item Category of groups
+\item Galois category
+\item Category of fundamental groups
+\item Category of Polish groups
+\item Groupoid category
+\item Category of groupoids (or groupoid category)
+\item Category of Borel groupoids
+\item Category of fundamental groupoids
+\item Category of functors (or functor category)
+\item Double groupoid category
+\item Double category
+\item Category of Hilbert spaces
+\item Category of quantum automata
+\item R-category
+\item Category of algebroids
+\item Category of double algebroids
+\item Category of dynamical systems
+\end{enumerate}
+
+\subsection{Index of functors}
+\emph{The following is a contributed listing of functors:}
+
+\begin{enumerate}
+\item Covariant functors
+\item Contravariant functors
+\item Adjoint functors
+\item Preadditive functors
+\item Additive functor
+\item Representable functors
+\item Fundamental groupoid functor
+\item Forgetful functors
+\item Grothendieck group functor
+\item Exact functor
+\item Multi-functor
+\item Section functors
+\item NT2
+\item NT3
+\end{enumerate}
+
+
+\subsection{Index of natural transformations}
+\emph{The following is a contributed listing of natural transformations:}
+
+\begin{enumerate}
+\item Natural equivalence
+\item Natural transformations in a 2-category
+\item NT3
+\item NT1
+\item NT2
+\item NT3
+\end{enumerate}
+
+
+
+\subsection{Grothendieck proposals}
+\begin{enumerate}
+\item \PMlinkname{Esquisse d'un Programme}{AlexSMathematicalHeritageEsquisseDunProgramme}
+\item 
+\PMlinkexternal{Pursuing Stacks}{http://www.math.jussieu.fr/~leila/grothendieckcircle/stacks.ps}
+\item S2
+\item S3
+\item S4
+
+\end{enumerate}
+
+\subsection{Descent theory}
+\begin{enumerate}
+\item D1
+\item D2
+\item D3
+\item D4
+
+\end{enumerate}
+
+\subsection{Higher dimensional algebra (HDA)}
+
+\begin{enumerate}
+\item Categorical groups 
+\item Double groupoids
+\item Double algebroids
+\item Bi-algebroids
+\item $R$-algebroid
+\item $2$-category
+\item $n$-category
+\item Super-category
+\item weak n-categories
+\item Bi-dimensional Geometry
+\item \PMlinkname{Noncommutative geometry}{NoncommutativeGeometry}
+\item Higher-Homotopy theories
+\item \PMlinkname{Higher-Homotopy Generalized van Kampen Theorem (HGvKT)}{GeneralizedVanKampenTheoremsHigherDimensional}
+\item H1
+\item H2
+\item H3
+\item H4
+
+\end{enumerate}
+
+
+
+\subsubsection{Axioms of cohomology theory}
+\begin{enumerate}
+
+\item A1
+\item A2
+\item A3
+\item A4
+\item A5
+\item A6
+\item A7
+
+\end{enumerate}
+
+\subsubsection{Axioms of homology theory}
+\begin{enumerate}
+
+\item A1
+
+\item A2
+\item A3
+\item A4
+\item A5
+\item A6
+
+\end{enumerate}
+
+\subsection{Quantum algebraic topology (QAT)} 
+
+\textbf{(a). Quantum algebraic topology} is described as \emph{the mathematical and physical study of  general theories of quantum algebraic structures from the standpoint of algebraic topology, category theory and
+their non-Abelian extensions in higher dimensional algebra and supercategories}
+\begin{enumerate}
+\item Quantum operator algebras (such as: involution, *-algebras, or $*$-algebras, von Neumann algebras,
+, JB- and JL- algebras,   $C^*$ - or C*- algebras, 
+\item Quantum von Neumann algebra and subfactors; Jone's towers and subfactors
+\item Kac-Moody and K-algebras
+\item categorical groups 
+\item Hopf algebras, quantum Groups and quantum group algebras
+\item Quantum groupoids and weak Hopf $C^*$-algebras
+\item Groupoid C*-convolution algebras and *-convolution algebroids
+\item Quantum spacetimes and quantum fundamental groupoids 
+\item Quantum double Algebras
+\item Quantum gravity, supersymmetries, supergravity, superalgebras and graded `Lie' algebras
+\item Quantum categorical algebra and higher--dimensional, $\L{}-M_n$- Toposes
+\item Quantum R-categories, R-supercategories and spontaneous symmetry breaking
+\item Non-Abelian Quantum algebraic topology (NA-QAT): closely related to NAAT and HDA.
+\end{enumerate}
+
+\subsection{Quantum Geometry}
+\begin{enumerate}
+\item \PMlinkname{Quantum Geometry overview}{QuantumGeometry2}
+\item Quantum non-commutative geometry
+\end{enumerate}
+
+
+\subsection{Non-Abelian Algebraic Topology (NAAT)}
+
+\begin{enumerate}
+\item Non-Abelian categories
+\item Non-commutative groupoids (including non-Abelian groups)
+\item \PMlinkname{Generalized van Kampen theorems}{GeneralizedVanKampenTheoremsHigherDimensional}
+\item \PMlinkname{Noncommutative Geometry (NCG)}{NoncommutativeGeometry}
+\item Non-commutative `spaces' of functions
+\item \PMlinkexternal{non-Abelian Algebraic Topology}{http://planetphysics.org/encyclopedia/NonAbelianAlgebraicTopology5.html}
+
+
+\end{enumerate}
+
+
+\subsection{12}
+
+
+\begin{enumerate}
+
+\item new1
+
+\item new2
+\item new3
+\item new4
+
+\end{enumerate}
+
+
+\subsection{13}
+\begin{enumerate}
+
+\item new1
+\item new2
+\item new3
+\item new4
+
+\end{enumerate}
+
+\subsection{14}
+
+
+\subsection{References}
+
+\PMlinkexternal{Bibliography on Category theory, AT and QAT}{http://planetmath.org/?op=getobj&from=objects&id=10746}
+
+
+\subsubsection{Textbooks and Expositions:}
+
+\begin{enumerate}
+\item A \PMlinkexternal{Textbook1}{http://planetmath.org/?op=getobj&from=books&id=172}
+\item A \PMlinkexternal{Textbook2}{http://planetmath.org/?op=getobj&from=books&id=156}
+\item A \PMlinkexternal{Textbook3}{http://planetmath.org/?op=getobj&from=books&id=159}
+\item A \PMlinkexternal{Textbook4}{http://planetmath.org/?op=getobj&from=books&id=160}
+\item A \PMlinkexternal{Textbook5}{http://planetmath.org/?op=getobj&from=books&id=153}
+\item A \PMlinkexternal{Textbook6}{http://planetmath.org/?op=getobj&from=lec&id=68}
+\item A \PMlinkexternal{Textbook7}{http://planetmath.org/?op=getobj&from=books&id=158}
+\item A \PMlinkexternal{Textbook8}{http://planetmath.org/?op=getobj&from=lec&id=75}            
+\item A \PMlinkexternal{Textbook9}{http://planetmath.org/?op=getobj&from=lec&id=73}
+\item A \PMlinkexternal{Textbook10}{http://planetmath.org/?op=getobj&from=books&id=174}
+\item A \PMlinkexternal{Textbook11}{http://planetmath.org/?op=getobj&from=books&id=169}
+\item A \PMlinkexternal{Textbook12}{http://planetmath.org/?op=getobj&from=books&id=178}
+\item A \PMlinkexternal{Textbook13}{http://www.math.cornell.edu/~hatcher/VBKT/VB.pdf}
+\item new1
+
+
+\end{enumerate}
+
+%%%%%
+%%%%%
+\end{document}

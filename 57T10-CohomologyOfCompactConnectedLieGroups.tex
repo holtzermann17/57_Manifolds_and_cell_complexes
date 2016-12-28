@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CohomologyOfCompactConnectedLieGroups}
+\pmcreated{2013-03-22 17:49:47}
+\pmmodified{2013-03-22 17:49:47}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{cohomology of compact connected Lie groups}
+\pmrecord{10}{40295}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57T10}
+\pmclassification{msc}{58A12}
+\pmclassification{msc}{55N99}
+\pmclassification{msc}{22E15}
+\pmrelated{InvariantDifferentialForm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapephrase{properties}
+\PMlinkescapephrase{structure}
+\PMlinkescapephrase{type}
+\PMlinkescapephrase{singular}
+\PMlinkescapephrase{theory}
+\PMlinkescapephrase{proposition}
+\PMlinkescapephrase{compact}
+\PMlinkescapephrase{connected}
+\PMlinkescapephrase{cohomology}
+\PMlinkescapephrase{complex}
+\PMlinkescapephrase{right}
+\PMlinkescapephrase{invariant}
+\PMlinkescapephrase{tangent space}
+\PMlinkescapephrase{adjoint}
+\PMlinkescapephrase{alternating}
+
+This entry aims to describe some properties of the \PMlinkname{cohomology}{DeRhamCohomology} of \PMlinkname{compact}{Compact} \PMlinkname{connected}{ConnectedSpace} Lie groups. It turns out that this type of Lie groups admit a somewhat simplified cohomology theory, compared with singular cohomology or de Rham cohomology. This simplified theory then allows one to observe some of the \PMlinkescapetext{restrictions} imposed on the structure of the cohomology groups of compact connected Lie groups.
+
+The construction and results presented in the entry on invariant differential forms are assumed and will be the \PMlinkescapetext{base} of what we are about to describe.
+
+\section{Cohomology of invariant forms}
+
+Let $G$ be a compact connected Lie group. Given a differential manifold $M$ and smooth action of $G$ in $M$, let $\Omega_G^k(M)$ denote the space of the \PMlinkname{$k$-invariant differential forms}{InvariantDifferentialForm} in $M$. It is known (see \PMlinkname{this entry}{InvariantDifferentialForm}) that $\Omega_G^*(M)$ forms a chain complex and the cohomology groups of this complex are isomorphic to the cohomology groups of $M$, i.e.
+\begin{displaymath}
+H^k(\Omega_G(M)) \cong H^k(M;\mathbb{R})
+\end{displaymath}
+
+We now regard the manifold $M$ as a compact connected Lie group $G$. There are several smooth actions on $G$ that are worth to be considered, such as:
+\begin{itemize}
+\item The action of $G$ on itself by left multiplication.
+\item The action of $G$ on itself by right multiplication.
+\item The action of $G$ on itself by conjugation.
+\item The action of $G\times G$ on $G$ given by $(g,h)\cdot k :=gkh^{-1}$
+\end{itemize}
+
+Thus, by the previous remark, the cohomology of a compact connected Lie group $G$ restricts to the cohomology of left invariant forms, right invariant forms, adjoint invariant forms or \PMlinkname{bi-invariant forms}{InvariantDifferentialForm}. Moreover, the cohomology of $G$ is the cohomology of differential forms invariant under any smooth action of any compact connect Lie group on $G$ .
+
+\subsection{Left invariant forms}
+
+Since left invariant forms are uniquely determined by their values in $T_eG$, the \PMlinkname{tangent space}{TangentSpace} at the identity, they allow a simpler characterization of the cohomology of compact connected Lie groups.
+
+$\,$
+
+{\bf Proposition -} Let $G$ be a compact connected Lie group and $T_eG^*$ the chain complex of alternating forms on $T_eG$ with coboundary operator $d$ given by
+\begin{displaymath}
+d\omega (X_0, \dots , X_k) = \sum_{i<j} (-1)^{i+j} \omega([X_i, X_j], X_0, \dots, \hat{X_i}, \dots, \hat{X_j}, \dots, X_k)
+\end{displaymath}
+Then, the cohomology groups of $H^k(G, \mathbb{R})$ are isomorphic to the cohomology groups $H^k(T_eG^*)$ of the complex $T_eG^*$.
+
+$\,$
+
+\subsection{Bi-invariant forms}
+Two sided invariance is just the same as left invariance \PMlinkescapetext{plus} adjoint invariance. Hence, every bi-invariant form can be seen as an alternating form on $T_eG$ wich is also adjoint invariant. Thus, just like the previous proposition, the cohomology groups of $G$ are just the cohomology groups of the complex $T_eG^*_{ad}$ of adjoint invariant alternating forms on $T_eG$, with coboundary operator
+\begin{displaymath}
+d\omega (X_0, \dots , X_k) = \sum_{i<j} (-1)^{i+j} \omega([X_i, X_j], X_0, \dots, \hat{X_i}, \dots, \hat{X_j}, \dots, X_k)
+\end{displaymath}
+
+This can be further improved. The following important theorem will be the key to more specific results.
+
+$\,$
+
+{\bf Theorem 1 -} Let $G$ be a compact connected Lie group. Let $\omega$ be a multilinear $k$-form on $T_e$. Then $\omega$ is adjoint invariant if and only if the following equality holds:
+\begin{displaymath}
+\sum_{i=1}^k \omega(X_1, \dots, X_{i-1}, [Y,X_i],X_{i+1},\dots,X_k)=0 \;\;\;\;\; \text{for all}\; Y, X_1, \dots, X_k \in T_eG
+\end{displaymath}
+
+$\,$
+
+{\bf Proposition -} Every adjoint invariant alternating form on $T_eG$ is \PMlinkname{closed}{ClosedDifferentialForm}.
+
+{\bf \emph{Proof:}} Let $\alpha_{i,i}=0$, $\alpha_{i,j}=(-1)^j$ if $i <j$ and $\alpha_{i,j} = (-1)^{j+1}$ if $i > j$. Then
+\begin{eqnarray*}
+d\omega (X_0, \dots , X_k) & = & \frac{1}{2} \sum_{i \neq j} (-1)^i \alpha_{i,j} \omega([X_i, X_j], X_0, \dots, \hat{X_i}, \dots, \hat{X_j}, \dots, X_k)\\
+& = & \frac{1}{2} \sum_i (-1)^i \sum_j \alpha_{i,j} \omega([X_i, X_j], X_0, \dots, \hat{X_i}, \dots, \hat{X_j}, \dots, X_k)\\
+& = & 0 \,
+\end{eqnarray*}
+where the \PMlinkescapetext{inner} sum is zero by Theorem 1. $\square$
+
+$\,$
+
+{\bf Corollary 1 -} Let $G$ be a compact connected Lie group. The cohomology groups $H^k(G;\mathbb{R})$ are isomorphic to the vector space of adjoint invariant alternating $k$-forms on $T_eG$.
+
+$\,$
+
+\section{Relations between cohomology groups}
+
+Let $G$ be a compact connected Lie group. In the proofs of the following results we are always using the fact stated in Corollary 1, that $H^k(G;\mathbb{R})$ is exactly the space of adjoint invariant alternating $k$-forms on $T_eG$. Let $[T_eG, T_eG]$ denote the \PMlinkname{subspace}{VectorSubspace} of $T_eG$ generated by elements of the form $[X,Y]$, with $X, Y \in T_eG$.
+
+$\;$
+
+{\bf Proposition -} $\qquad [T_eG, T_eG] = T_eG \;\, \Longleftrightarrow \;\, H^1(G;\mathbb{R})=0$
+
+{\bf \emph{Proof:}} It follows easily form the fact that adjoint invariant alternating $1$-forms on $T_eG$ are precisely those who satisfy $\omega([X,Y]) = 0$ for all $X, Y \in T_eG$ (Theorem 1). $\square$
+
+$\,$
+
+{\bf Corollary -} $\qquad H^1(G;\mathbb{R}) = 0 \;\, \Longrightarrow \;\, H^2(G;\mathbb{R})=0$
+
+{\bf \emph{Proof:}} Let $\omega$ be an adjoint invariant $2$-form on $T_eG$. We have that
+\begin{eqnarray*}
+0 = d\omega(X, Y, Z) & = & -\omega([X,Y],Z) + \omega([X,Z],Y) - \omega([Y,Z],X)\\
+& = & -\omega([X,Y],Z) - \Big( \omega([Z, X],Y) + \omega(X,[Z,Y]) \Big)\\
+& = & -\omega([X,Y],Z)
+\end{eqnarray*}
+where the last step comes from Theorem 1. Now, as $[T_eG, T_eG] = T_eG$ by the previous Proposition, $\omega = 0$. $\square$
+
+$\,$
+
+Let $Sym^2$ be the space of adjoint invariant symmetric bilinear forms on $T_eG$ and $T_eG_ad^k$ the space of adjoint invariant alternating $k$-forms on $T_eG$.
+
+$\,$
+
+{\bf Theorem 2 - } Suppose $H^1(G;\mathbb{R})=0$. The function $\Phi : Sym^2 \longrightarrow T_eG^3$ defined by
+\begin{displaymath}
+\Phi(\eta)\,(X,Y,Z) := \eta([X,Y],Z)\,, \qquad\qquad X,Y,Z \in T_eG
+\end{displaymath}
+is well defined and bijective.
+
+$\,$
+
+One can always assure the existence of nonzero adjoint invariant symmetric bilinear forms on $T_eG$. This can be achieved by taking an inner product $\langle \cdot , \cdot \rangle$ on $T_eG$ and defining, for $X,Y \in T_eG$,
+\begin{displaymath}
+\eta(X,Y):= \frac{1}{\mu(G)}\int_G \langle (C_g)_* X , (C_g)_* Y \rangle \;d\mu(g)
+\end{displaymath}
+where $\mu$ is the Haar measure of $G$ and $C_g$ is the function of conjugation by $g \in G$. Hence we can conclude that
+
+$\,$
+
+{\bf Corollary -} Suppose $G$ is nontrivial. Then $\;\; H^1(G;\mathbb{R}) = 0 \;\, \Longrightarrow \;\, H^3(G;\mathbb{R})\neq0$
+
+
+%%%%%
+%%%%%
+\end{document}

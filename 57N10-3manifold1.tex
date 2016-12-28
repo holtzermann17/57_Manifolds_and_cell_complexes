@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{3manifold}
+\pmcreated{2013-03-22 15:40:55}
+\pmmodified{2013-03-22 15:40:55}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{3-manifold}
+\pmrecord{17}{37623}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57N10}
+%\pmkeywords{Seifert fiber spaces}
+%\pmkeywords{bundle}
+\pmrelated{manifold}
+\pmrelated{DehnsLemma}
+\pmrelated{SphereTheorem}
+\pmrelated{LoopTheorem}
+\pmrelated{SeifertFiberSpace}
+\pmrelated{Manifold}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\usepackage{bbm}
+%\newcommand{\Z}{\mathbbmss{Z}}
+%\newcommand{\C}{\mathbbmss{C}}
+%\newcommand{\R}{\mathbbmss{R}}
+%\newcommand{\Q}{\mathbbmss{Q}}
+%\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\begin{document}
+In this brief note we define and give instances of the notion of a 3-manifold.
+
+A \emph{3-manifold} is a Hausdorff topological space which is locally homeomorphic to the Euclidean space ${\mathbb{R}}^3$.
+
+One can see from simple constructions the great variety of objects that indicate how they are worth to study.
+
+First examples without boundary:
+\begin{enumerate}
+\item For example, with the Cartesian product we can get:
+\begin{itemize}
+\item $S^2\times S^1$
+\item ${\mathbb{R}}P^2\times S^1$
+\item $T\times S^1$
+\item $K\times S^1$
+\end{itemize}
+where $S^1$ and $S^2$ are the 1- and 2-dimensional spheres respectively, $T$ is a torus, $K$ a Klein bottle, and $\mathbb{R}P^2$ is the 2-dimensional real projective space.
+
+\item Also by the generalization of the Cartesian product: \emph{fiber bundles}, one can build bundles $E$ of the type
+$$F\subset E\to S^1$$
+where $F$ is any closed surface.
+
+\item Or interchanging the roles, bundles as:
+$$S^1\subset E\to F$$
+
+\item knots and links complements
+\end{enumerate}
+
+For the second type it is known that for each \emph{isotopy class} $[\phi]$ of maps $F\to F$ correspond to an unique bundle $E_{\phi}$. Any homeomorphism $f:F\to F$ representing the isotopy class $[\phi]$ is called a \emph{monodromy} for $E_{\phi}$.
+
+From the previous paragraph we infer that the \emph{mapping class group} play a important role in the understanding at least for this subclass of objets.
+
+For the third class above one can use an \emph{orbifold} instead of a simple surface to get a class of 3-manifolds called \emph{Seifert fiber spaces} which are a large class of spaces needed to understand the modern classifications for 3-manifolds.
+
+
+{\bf References}
+\begin{itemize}
+\item  J.C. G\'omez-Larra\~naga. {\it 3-manifolds which are unions of three solid tori},
+Manuscripta Math. 59 (1987), 325-330.
+\item  J.C. G\'omez-Larra\~naga, F.J. Gonz\'alez-Acu\~na, J. Hoste.
+{\it Minimal Atlases on 3-manifolds},
+Math. Proc. Camb. Phil. Soc. 109 (1991), 105-115.
+\item  J. Hempel. {\it 3-manifolds}, Princeton University Press 1976.
+\item  P. Orlik. {\it Seifert Manifolds}, Lecture Notes in Math. 291,
+1972 Springer-Verlag.
+\item  P. Scott. {\it The geometry of 3-manifolds}, Bull. London Math. Soc. 15 (1983), 401-487.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

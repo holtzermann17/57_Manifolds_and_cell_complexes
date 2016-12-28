@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KnotTheory}
+\pmcreated{2013-03-22 13:17:27}
+\pmmodified{2013-03-22 13:17:27}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{knot theory}
+\pmrecord{9}{33778}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57M25}
+\pmrelated{Unknot}
+\pmrelated{ConnectedSum}
+\pmrelated{Tangle}
+\pmrelated{JonesPolynomialKnotTheory}
+\pmdefines{knot}
+\pmdefines{link}
+\pmdefines{knot diagram}
+\pmdefines{Reidemeister moves}
+\pmdefines{vertices}
+\pmdefines{elementary deformation}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{graphicx}
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{even}
+
+Knot theory is the study of \emph{knots} and \emph{links}.
+
+Roughly a \emph{knot} is a simple closed curve in $\mathbb{R}^3$, and two knots are considered equivalent if and only if one can be smoothly deformed into another. This will often be used as a working definition as it is simple and appeals to intuition. Unfortunately this definition can not be taken too seriously because it includes many pathological cases, or wild knots, such as the connected sum of an infinite number of trefoils. Furthermore one must be careful about defining a ``smooth deformation'', or all knots might turn out to be equivalent! (We shouldn't be allowed to shrink part of a knot down to nothing.)
+
+Links are defined in terms of knots, so once we have a definition for knots we have no trouble defining them.
+\begin{defn}
+A \emph{link} is a set of disjoint knots.
+\end{defn}
+Each knot is a \emph{component} of the link. In particular a knot is a link of one component.
+
+Luckily the knot theorist is not usually interested in the exact form of a knot or link, but rather the in its equivalence class. (Even so a possible formal definition for knots is given at the end of this entry.) All the ``interesting'' information about a knot or link can be described using a \emph{knot diagram}. (It should be noted that the words ``knot'' and ``link'' are often used to mean an equivalence class of knots or links respectively. It is normally clear from context if this usage is intended.)
+
+A knot diagram is a projection of a link onto a plane such that no more than two points of the link are projected to the same point on the plane and at each such point it is indicated which strand is closest to the plane (usually by erasing part of the lower strand). This can best be explained with some examples:
+
+\bigskip
+
+\hfil \includegraphics[width= 1.8in]{knot10_89} \hfill
+\includegraphics[width= 1.8in]{trefoil} \hfil
+
+\hfil \includegraphics[width= 1.8in]{nasty_unknot} \hfill
+\includegraphics[width= 1.8in]{unknot} \hfil
+
+\centerline{\emph{some knot diagrams}}
+
+\bigskip
+
+Two different knot diagrams may both represent the same knot --- for example the last two diagrams both represent the unknot, although this is not obvious. Much of knot theory is devoted to telling when two knot diagrams represent the same link. In one sense this problem is easy --- two knot diagrams represent equivalent links if and only if there exists a sequence of \emph{Reidemeister moves} transforming one diagram to another.
+
+\begin{defn} A \emph{Reidemeister move} consists of modifying a portion of knot diagram in one of the following ways:
+\begin{enumerate}
+\item A single strand may be twisted, adding a crossing of the strand with itself.
+\item A single twist may be removed from a strand removing a crossing of the strand with itself.
+\item When two strands run parallel to each other one may be pushed under the other creating to new over-crossings.
+\item When one strand has two consecutive over-crossings with another strand the strands may be straightened so that the two run parallel.
+\item Given three strands $A$, $B$ and $C$ so that $A$ passes below $B$ and $C$, $B$ passes between $A$ and $C$, and $C$ passes above $A$ and $B$, the strand $A$ may be moved to either side of the crossing of $B$ and $C$.
+\end{enumerate}
+\end{defn}
+Note that number 1. is the inverse of number 2. and number  3. is the inverse of number 4. Number 5 is its own inverse. In pictures:
+
+\begin{center}
+\includegraphics[width= 1in]{twist}
+\hskip 0.3in \raisebox{0.5in}{$\longleftrightarrow$}
+\includegraphics[width= 1in]{untwist}
+
+\includegraphics[width= 1in]{parallel}
+\hskip 0.3in \raisebox{0.5in}{$\longleftrightarrow$} \hskip 0.2in
+\includegraphics[width= 1in]{passover}
+
+\includegraphics[width= 1in]{r3}
+\hskip 0.3in \raisebox{0.5in}{$\longleftrightarrow$} \hskip 0.2in
+\includegraphics[width= 1in, angle=180, origin= c]{r3}
+\end{center}
+
+Finding such a sequence of Reidemeister moves is generally not easy, and proving that no such sequence exists can be very difficult, so other approaches must be taken.
+
+Knot theorists have accumulated a large number of \emph{knot invariants}, values associated with a knot diagram which are unchanged when the diagram is modified by a Reidemeister move. Two diagrams with the same invariant may not represent the same knot, but two diagrams with different invariant never represent the same knot.
+
+Knot theorists also study ways in which a complex knot may be described in terms of simple pieces --- for example every knot is the connected sum of non trivial prime knots and many knots can be described simply using Conway notation.
+
+\subsection*{formal definitions of \emph{knot}}
+\subsubsection*{polygonal knots}
+This definition is used by Charles Livingston in his book \emph{Knot Theory}. It avoids the problem of wild knots by restricting knots to piece-wise linear (polygonal) curves. Every knot that is intuitively ``tame'' can be approximated by such knot. We also define the \emph{vertices}, \emph{elementary deformation}, and \emph{equivalence} of knots.
+\begin{defn}
+A \emph{knot} is a simple closed polygonal curve in $\mathbb{S}^3$.
+\end{defn}
+\begin{defn}
+The vertices of a knot are the smallest ordered set of points such that the knot can be constructed by connecting them.
+\end{defn}
+\begin{defn}
+A knot $J$ is an \emph{elementary deformation} of a knot $K$ if one is formed from the other by adding a single vertex $v_0$ not on the knot such that the triangle formed by $v_0$ together with its adjacent vertices $v_1$ and $v_2$ intersects the knot only along the segment $[v_1,v_2]$.
+\end{defn}
+\begin{defn}
+A knot $K_0$ is \emph{equivalent} to a knot $K_n$ if there exists a sequence of knots $K_1,\hdots,K_{n-1}$ such that $K_i$ is an elementary deformation of $K_{i-1}$ for $1<i\leq n$.
+\end{defn}
+\subsubsection*{smooth submanifold}
+This definition is used by Raymond Lickorish in \emph{An Introduction to Knot Theory}.
+\begin{defn}
+A \emph{link} is a smooth one dimensional submanifold of the 3-sphere $S^3$.  A \emph{knot} is a link consisting of one component.
+\end{defn}
+\begin{defn}
+Links $L_1$ and $L_2$ are defined to be equivalent if there is an orientation-preserving homeomorphism $h: S^3 \to S^3$ such that $h(L_1) = L_2$.
+\end{defn}
+%%%%%
+%%%%%
+\end{document}

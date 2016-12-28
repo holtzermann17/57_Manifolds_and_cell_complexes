@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ThomSpace}
+\pmcreated{2013-03-22 15:40:46}
+\pmmodified{2013-03-22 15:40:46}
+\pmowner{antonio}{1116}
+\pmmodifier{antonio}{1116}
+\pmtitle{Thom space}
+\pmrecord{5}{37620}
+\pmprivacy{1}
+\pmauthor{antonio}{1116}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R22}
+\pmclassification{msc}{55R25}
+\pmdefines{Thom space}
+\pmdefines{disk bundle}
+\pmdefines{sphere bundle}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\usepackage{theorem}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\limv}[2]{\lim\limits_{#1\rightarrow #2}}
+\newcommand{\eb}{\mathbf{e}} % Standard basis
+\newcommand{\comp}{\circ} % Function composition
+\newcommand{\R}{{\mathbb R}} % The reals
+\newcommand{\reals}{{\mathbb R}} % The reals
+\newcommand{\integs}{{\mathbb Z}} % The integers
+\newcommand{\cpxs}{{\mathbb C}} % The "complexes" :)
+\newcommand{\setc}[2]{\left\{#1:\: #2\right\}}
+\newcommand{\set}[1]{{\left\{#1\right\}}}
+\newcommand{\cycle}[1]{\left(#1\right)}
+\newcommand{\tuple}[1]{\left(#1\right)}
+\newcommand{\Partial}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\PartialSl}[2]{\partial #1/\partial #2}
+\newcommand{\funcsig}[2]{#1\rightarrow #2}
+\newcommand{\funcdef}[3]{#1:\funcsig{#2}{#3}}
+\newcommand{\supp}{\mathop{\mathrm{Supp}}} % Support of a function
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}} % Sign function
+\newcommand{\tr}[1]{#1^\mathrm{tr}} % Transpose of a matrix
+\newcommand{\inprod}[2]{\left<#1,#2\right>} % Inner product
+\newenvironment{smallbmatrix}{\left[\begin{smallmatrix}}{\end{smallmatrix}\right]}
+\newcommand{\maps}[2]{\mathop{\mathrm{Maps}}\left(#1,#2\right)}
+\newcommand{\intoc}[2]{\left(#1,#2\right]}
+\newcommand{\intco}[2]{\left[#1,#2\right)}
+\newcommand{\intoo}[2]{\left(#1,#2\right)}
+\newcommand{\intcc}[2]{\left[#1,#2\right]}
+\newcommand{\transv}{\pitchfork}
+\newcommand{\pair}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\sqnorm}[1]{\left\|#1\right\|^2}
+\newcommand{\bdry}{\partial}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\tensor}{\otimes}
+\newcommand{\bigtensor}{\bigotimes}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\coker}{\operatorname{im}}
+\newcommand{\map}{\operatorname{Map}}
+\newcommand{\crit}{\operatorname{Crit}}
+\newcommand{\Th}{\operatorname{Th}}
+\theorembodyfont{\upshape}
+\newtheorem{thm}{Theorem}
+\newtheorem{dthm}[thm]{Desired Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{dcor}[thm]{Desired Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{defn}{Definition}
+\newtheorem{rmk}{Remark}
+\newtheorem{exm}{Example}
+\newcommand{\cross}{\times}
+\newcommand{\del}{\nabla}
+\newcommand{\homeo}{\cong}
+\newcommand{\isom}{\cong}
+\newcommand{\htpyeq}{\backsimeq}
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\projp}{{\mathbb R}P}
+
+% open cells (not very nice...)
+\newcommand{\oce}{\smash{\overset{\circ}e}} 
+\newcommand{\ocD}{\smash{\overset{\circ}D}} 
+
+\newcommand{\susp}{\Sigma}
+\newcommand{\restr}[2]{{#1}|_{#2}}
+
+\renewcommand{\hom}{\mathop{\mathrm{Hom}}} % Homomorphisms functor
+\newcommand{\rp}{\reals P} % real projective space
+\newcommand{\cp}{\cpxs P} % complex projective space
+\newcommand{\zmod}[1]{\integs / #1\integs} % Z/nZ
+\begin{document}
+Let $\xi\to X$ be a vector bundle over a topological space $X$. Assume that $\xi$ has a Riemannian metric. We can form its associated disk bundle $D(\xi)$ and its associated sphere bundle $S(\xi)$, by letting 
+$$ D(\xi) = \{v\in\xi: \|v\|\le 1\}, \quad S(\xi) = \{v\in\xi: \|v\|= 1\}. $$
+
+The \emph{Thom space} of $\xi$ is defined to be the quotient space $D(\xi)/S(\xi)$, obtained by taking the disk bundle and collapsing the sphere bundle to a point. Notice that this makes the Thom space naturally into a based topological space.
+
+Two common forms of notation for the Thom space are $\Th(\xi)$ and $X^\xi$.
+
+\begin{rmk}
+If $\xi= X\cross \R^d$ is a trivial vector bundle, then its Thom space is homeomorphic to $\Sigma^d X_+$, where $X_+$ stands for $X$ with an added disjoint basepoint, and $\Sigma^d$ stands for the based suspension iterated $d$ times. Thus, we may think of $X^\xi$ as a ``twisted suspension'' of $X_+$.
+\end{rmk}
+
+\begin{rmk}
+If $X$ is compact, then $X^\xi$ is homeomorphic as a based space to the one-point compactification of $\xi$. Even if $X$ is not compact, $X^\xi$ can be obtained by doing a one-point compactification on each fiber and then collapsing the resulting section of points at infinity to a point.
+\end{rmk}
+
+\begin{rmk}
+The choice of Riemannian metric on $\xi$ does not change the homeomorphism type of $X^\xi$, and, by the previous remark, the Thom space can be described without reference to associated disk and sphere bundles.
+\end{rmk}
+%%%%%
+%%%%%
+\end{document}

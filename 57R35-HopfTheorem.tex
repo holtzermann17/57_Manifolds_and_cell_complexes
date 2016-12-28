@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HopfTheorem}
+\pmcreated{2013-03-22 14:52:34}
+\pmmodified{2013-03-22 14:52:34}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Hopf theorem}
+\pmrecord{8}{36553}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R35}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+In the following we will assume that the term ``smooth'' implies just $C^1$ (once continuously differentiable).  By smooth homotopy we will \PMlinkescapetext{mean} that the homotopy mapping is itself continuously differentiable
+
+\begin{thm}
+Suppose that $M$ is a connected, \PMlinkname{oriented}{Orientation2} smooth manifold without boundary of dimension $m$ and suppose $f,g \colon M \to S^m$ are smooth mappings to the $m$-sphere.  Then $f$ and $g$ are smoothly homotopic if and only if $f$ and $g$ have the same Brouwer degree.
+\end{thm}
+
+When $M$ is not orientable, then we can always ``flip'' the orientation by following a closed loop on the manifold and one can then prove the following
+result.
+
+\begin{thm}
+Suppose that $M$ is not orientable, connected smooth manifold without boundary
+of dimension $m$, and suppose $f,g \colon M \to S^m$ are smooth mappings to
+the $m$-sphere.
+Then $f$ and $g$ are smoothly homotopic if and only if $f$ and $g$ have the
+same degree mod 2.
+\end{thm}
+
+\begin{thebibliography}{9}
+\bibitem{Milnor:topdiff}
+John~W. Milnor.
+{\em \PMlinkescapetext{Topology From The Differentiable Viewpoint}}.
+The University Press of Virginia, Charlottesville, Virginia, 1969.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

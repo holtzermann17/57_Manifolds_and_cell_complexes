@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DonaldsonFreedmanExoticR4}
+\pmcreated{2013-03-22 15:37:36}
+\pmmodified{2013-03-22 15:37:36}
+\pmowner{whm22}{2009}
+\pmmodifier{whm22}{2009}
+\pmtitle{Donaldson Freedman exotic R4}
+\pmrecord{13}{37552}
+\pmprivacy{1}
+\pmauthor{whm22}{2009}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R12}
+\pmclassification{msc}{14J80}
+%\pmkeywords{exotic manifolds}
+\pmrelated{Donaldsonstheorem}
+\pmrelated{exoticR4s}
+\pmrelated{ExoticR4s}
+\pmrelated{DonaldsonsTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand {\C} {\mathbb C}
+\newcommand {\Z} {\mathbb Z}
+\newcommand {\R} {\mathbb R}
+\begin{document}
+Let $K$ denote the simply connected closed 4- manifold given by 
+
+$$
+K=\{x:y:z:w \in \C P^3 | x^4+y^4+z^4+w^4=0\}
+$$
+
+Let $E_8$ denote the unique rank 8 unimodular symmetric bilinear form over $\Z$, which is positive definite and with respect to which, the norm of any vector is even. Let $B$ denote  the rank 2 bilinear form over $\Z$ which may be represented by the matrix
+
+$$
+\left(\begin{array}{cc} 0&1 \\ 1&0 \end{array}\right)
+$$
+
+Then we may regard $H_2(K;\Z)$ as a direct sum $M \oplus N$, where the cup product induces the form $E_8 \oplus E_8$ on $M$ and $B \oplus B \oplus B$ on $N$ and we have $M$ orthogonal to $N$.  (This does not contradict Donaldson's theorem as $B$ has 1 and -1 as eigenvalues.)
+
+We may choose a (topological) open ball, $U$, in $\#_3 S^2 \times S^2$ which contains a (topological) closed ball, $V$, such that we have a smooth embedding, $f:\#_3 S^2 \times S^2\,\, - \,\,V \to K$ satisfying the following property:
+
+The map $f$ induces an isomorphism  from $H_2( \#_3 S^2 \times 
+S^2\,\, - \,\,U;\Z)$ into the summand $N$ .
+
+
+
+If we could smoothly embed $S^3$ into $U - V$, enclosing $V$, then by replacing the outside of the embedded $S^3$ with a copy of $B^4$, and regarding $U-V$ as 
+lying in $K$, we obtain a smooth simply connected closed 4- manifold, with 
+bilinear form $E_8 \oplus E_8$ induced by the cup product.  This contradicts Donaldson's theorem.
+
+Therefore, $U$ has the property of containing a compact set which is not enclosed by any smoothly embedded $S^3$.  Hence $U$ is an exotic $\R^4$.
+
+By considering the three copies of $B$ one at a time, we could have obtained our exotic $\R^4$ as an open subset of $S^2 \times S^2$.
+%%%%%
+%%%%%
+\end{document}

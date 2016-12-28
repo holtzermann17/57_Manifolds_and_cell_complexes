@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Orbifold}
+\pmcreated{2013-03-22 15:40:06}
+\pmmodified{2013-03-22 15:40:06}
+\pmowner{guffin}{12505}
+\pmmodifier{guffin}{12505}
+\pmtitle{orbifold}
+\pmrecord{8}{37607}
+\pmprivacy{1}
+\pmauthor{guffin}{12505}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57M07}
+\pmsynonym{orbifold structure}{Orbifold}
+\pmdefines{orbifold structure}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Roughly, an orbifold is the quotient of a manifold by a finite group.  For example, take a sheet of paper and add a small crease perpendicular to one side at the halfway point.  Then, line up the two halves of the side.  This may be thought of as the plane $\mathbb R^2$ modulo the group $\mathbb Z^2$.  Now, let us give the definition.
+
+Define a category $\mathcal X$:
+The objects are pairs $(G,X)$, where $G$ is a finite group acting
+effectively on a connected smooth manifold $X$.  A morphism $\Phi$ between
+two objects $(G^\prime, X^\prime)$ and $(G,X)$ is a family of open
+embeddings $\phi:X^\prime\rightarrow X$ which satisfy
+
+\begin{itemize}
+\item for each embedding $\phi\in\Phi$, there is an injective homomorphism
+$\lambda_\phi:G^\prime\rightarrow G$ such that $\phi$ is $\lambda_\phi$
+equivariant
+\item For $g\in G$, we have
+\begin{align*}
+g\phi&:X^\prime\rightarrow X\\
+g\phi&:x\mapsto g\phi(x)
+\end{align*}
+and if $(g\phi)(X) \cap \phi(X) \ne \emptyset$, then $g\in
+\lambda_\phi(G^\prime)$.
+\item $\Phi = \{g\phi, g\in G$\}, for any $\phi \in \Phi$
+\end{itemize}
+
+
+
+Now, we define orbifolds.  Given a paracompact Hausdorff space $X$ and a
+nice open covering $\mathcal U$ which forms a basis for the topology on
+$X$, an orbifold structure $\mathcal V$ on $X$ consists of
+\begin{enumerate}
+\item For $U\in \mathcal U$, $\mathcal V(U) = (G_U,\tilde U)\stackrel \tau
+\rightarrow U$ is a ramified cover $\tilde U \rightarrow U$ which
+identifies $\tilde U\slash G_U \cong U$
+\item For $U\subset V \in \mathcal U$, there exists a morphism
+$\phi_{VU}(G_U, \tilde U)\rightarrow (G_V, \tilde V)$ covering the
+inclusion
+\item If $U\subset V\subset W \in \mathcal U$, $\phi_{WU} =
+\phi_{WV}\circ\phi_{VU}$
+\end{enumerate}
+
+References:
+
+[1] Kawasaki T., The Signature theorem for V-manifolds. Topology 17 (1978), 75-83. MR0474432
+(57:14072)
+%%%%%
+%%%%%
+\end{document}

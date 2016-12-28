@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfASpaceThatIsNotSemilocallySimplyConnected}
+\pmcreated{2013-03-22 13:25:10}
+\pmmodified{2013-03-22 13:25:10}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{example of a space that is not semilocally simply connected}
+\pmrecord{16}{33967}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57M10}
+\pmclassification{msc}{54D05}
+\pmdefines{Hawaiian rings}
+\pmdefines{Hawaiian earrings}
+
+%\documentclass{amsart}
+\usepackage{amsmath}
+%\usepackage[all,poly,knot,dvips]{xy}
+\usepackage{pstricks,pst-poly,pst-node}%,pstcol}
+
+
+\usepackage{amssymb,latexsym}
+
+\usepackage{amsthm,latexsym}
+\usepackage{eucal,latexsym}
+
+% THEOREM Environments --------------------------------------------------
+
+\newtheorem{thm}{Theorem}
+ \newtheorem*{mainthm}{Main~Theorem}
+ \newtheorem{cor}[thm]{Corollary}
+ \newtheorem{lem}[thm]{Lemma}
+ \newtheorem{prop}[thm]{Proposition}
+ \newtheorem{claim}[thm]{Claim}
+ \theoremstyle{definition}
+ \newtheorem{defn}[thm]{Definition}
+ \theoremstyle{remark}
+ \newtheorem{rem}[thm]{Remark}
+ \numberwithin{equation}{subsection}
+
+
+%---------------------  Greek letters, etc ------------------------- 
+
+\newcommand{\CA}{\mathcal{A}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\CM}{\mathcal{M}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\BC}{\mathbb{C}}
+\newcommand{\BN}{\mathbb{N}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\FF}{\mathfrak{F}}
+\newcommand{\FL}{\mathfrak{L}}
+\newcommand{\FM}{\mathfrak{M}}
+\newcommand{\Ga}{\alpha}
+\newcommand{\Gb}{\beta}
+\newcommand{\Gg}{\gamma}
+\newcommand{\GG}{\Gamma}
+\newcommand{\Gd}{\delta}
+\newcommand{\GD}{\Delta}
+\newcommand{\Ge}{\varepsilon}
+\newcommand{\Gz}{\zeta}
+\newcommand{\Gh}{\eta}
+\newcommand{\Gq}{\theta}
+\newcommand{\GQ}{\Theta}
+\newcommand{\Gi}{\iota}
+\newcommand{\Gk}{\kappa}
+\newcommand{\Gl}{\lambda}
+\newcommand{\GL}{\Lamda}
+\newcommand{\Gm}{\mu}
+\newcommand{\Gn}{\nu}
+\newcommand{\Gx}{\xi}
+\newcommand{\GX}{\Xi}
+\newcommand{\Gp}{\pi}
+\newcommand{\GP}{\Pi}
+\newcommand{\Gr}{\rho}
+\newcommand{\Gs}{\sigma}
+\newcommand{\GS}{\Sigma}
+\newcommand{\Gt}{\tau}
+\newcommand{\Gu}{\upsilon}
+\newcommand{\GU}{\Upsilon}
+\newcommand{\Gf}{\varphi}
+\newcommand{\GF}{\Phi}
+\newcommand{\Gc}{\chi}
+\newcommand{\Gy}{\psi}
+\newcommand{\GY}{\Psi}
+\newcommand{\Gw}{\omega}
+\newcommand{\GW}{\Omega}
+\newcommand{\Gee}{\epsilon}
+\newcommand{\Gpp}{\varpi}
+\newcommand{\Grr}{\varrho}
+\newcommand{\Gff}{\phi}
+\newcommand{\Gss}{\varsigma}
+
+\def\co{\colon\thinspace}
+\begin{document}
+An example of a space that is \emph{not} semilocally simply connected is
+the following: Let 
+$$HR=\bigcup_{n\in\BN}\left\{(x,y)\in \BR^2\,\bigg\vert\,\left(x-\frac{1}{2^n}\right)^2+y^2=
+\left(\frac{1}{2^n}\right)^2\right\}$$
+endowed with the subspace topology. Then $(0,0)$ has no simply connected
+neighborhood. Indeed every neighborhood of $(0,0)$ contains (ever diminshing)
+homotopically non-trivial loops. Furthermore these loops are homotopically non-trivial even when considered as loops in $HR$. 
+\begin{figure*}[htbp]
+  \centering
+  \begin{pspicture}(0,-2)(4,3)
+    \pscircle(2,0){2}
+    \pscircle(1,0){1}
+    \pscircle(.5,0){.5}
+    \pscircle(.25,0){.25}
+    \pscircle(.125,0){.125}
+    \pscircle(.625,0){.625}
+    \pscircle(0.015625,0){0.015625}
+  \end{pspicture}
+  \caption{The Hawaiian rings}
+  \end{figure*}
+
+It is essential in this example that $HR$ is endowed with the topology
+induced by its inclusion in the plane. In contrast, the same set endowed with  
+the CW topology is just a bouquet of countably many circles and (as any CW
+complex) it is semilocaly simply connected.
+%%%%%
+%%%%%
+\end{document}

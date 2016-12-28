@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{mathcalCrTopologies}
+\pmcreated{2013-03-22 14:08:27}
+\pmmodified{2013-03-22 14:08:27}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{$\mathcal{C}^r$ topologies}
+\pmrecord{5}{35555}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R12}
+\pmsynonym{Whitney topology}{mathcalCrTopologies}
+\pmsynonym{compact-open $\mathcal{C}^r$ topology}{mathcalCrTopologies}
+\pmsynonym{weak $\mathcal{C}^r$ topology}{mathcalCrTopologies}
+\pmsynonym{strong $\mathcak{C}^r$ topology}{mathcalCrTopologies}
+\pmrelated{ConjectureApproximationTheoremHoldsForWhitneyCrMNSpaces}
+\pmrelated{ApproximationTheoremAppliedToWhitneyCrMNSpaces}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+The $\C^r$ Whitney (or strong) topology is a topology
+assigned to the space $\C^r(M,N)$ of mappings from
+a $\C^r$ manifold $M$ to a $\C^r$ manifold $N$ having
+$r$ continuous derivatives . It gives a notion of proximity
+of two $\C^r$ mappings, and it allows us to speak of ``robustness''
+of properties of a mapping. For example, the
+property of being an embedding is robust: if $f\colon M\to N$
+is a $\C^r$ embedding, then there is a strong $\C^r$
+neighborhood of $f$ in which any $\C^r$ mapping $g\colon M\to N$
+is an embedding.
+
+Given a locally finite atlas $\{(U_i, \phi_i):i\in I\}$ and compact sets
+$K_i\subset U_i$ such that there are charts
+$\{(V_i,\psi_i) : i\in I\}$ of $N$ for which
+$f(K_i)\subset V_i$ for all $i\in I$, and given a sequence
+$\{\epsilon_i>0 : i\in I\}$, we define the basic neighborhood
+$$\mathcal{U}^r\left(f,\phi,\psi,\{K_i:i\in I\},\{\epsilon_i:i\in I\}\right)$$
+as the set of $C^r$ mappings $g\colon M\to N$ such that for all $i\in I$
+we have $g(K_i)\subset V_i$ and
+$$\sup_{x\in \phi_i(K_i), 0\leq k\leq r} 
+||D^k(\psi_if\phi_i^{-1})(x) - D^k(\psi_ig\phi_i^{-1})(x)|| <\epsilon_i.$$
+That is, those maps $g$ that are close to $f$ and have their first $r$
+derivatives close to the respective first $r$-th
+derivatives of $f$, in local coordinates.
+It can be checked that the set of all such neighborhoods forms a basis
+for a topology, which we call the Whitney or strong $\C^r$ 
+topology of $\C^r(M,N)$.
+
+The weak $\C^r$ topology, or $\C^r$ compact-open topology, is defined
+in the same fashion but instead of choosing
+$\{(U_i,\phi_i):i\in I\}$ to be a locally finite atlas for $M$,
+we require it to be an arbitrary \emph{finite} family of charts
+(possibly not covering $M$).
+
+The space $\C^r(M,N)$ with the weak or strong topologies is denoted by
+$\C^r_W(M,N)$ and $\C^r_S(M,N)$, respectively.
+
+We have that $\C^r_W(M,N)$ is always metrizable (with a complete metric)
+and separable. On the other hand, $\C^r_S(M,N)$ is not even first countable (thus, not metrizable) when $M$ is not compact; however, it is a Baire space. When $M$ is compact, the weak and strong topologies coincide.
+%%%%%
+%%%%%
+\end{document}

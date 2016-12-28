@@ -1,0 +1,36 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SardsTheorem}
+\pmcreated{2013-03-22 13:04:09}
+\pmmodified{2013-03-22 13:04:09}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Sard's theorem}
+\pmrecord{9}{33477}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{57R35}
+\pmrelated{Residual}
+\pmrelated{BaireCategoryTheorem}
+\pmdefines{critical point}
+\pmdefines{critical value}
+\pmdefines{regular value}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+Let $\phi : X^n \rightarrow Y^m$ be a smooth map on smooth manifolds. A {\it critical point} of $\phi$ is a point $p\in X$ such that the differential $\phi_* : T_pX \rightarrow T_{\phi(p)}Y$ considered as a linear transformation of real vector spaces has \PMlinkname{rank}{RankLinearMapping} $<m$. A {\it critical value} of $\phi$ is the image of a critical point. A {\it regular value} of $\phi$ is a point $q\in Y$ which is not the image of any critical point. In particular, $q$ is a regular value of $\phi$ if $q\in Y \setminus \phi(X)$.
+
+Following Spivak \cite{Spivak}, we say a subset $V$ of $Y^m$ \emph{has measure zero} if there is a sequence of coordinate charts $(x_i,U_i)$ whose union contains $V$ and such that $x_i(U_i\cap V)$ has measure 0 (in the usual sense) in $\mathbb{R}^m$ for all $i$.  With that definition, we can now state:
+
+{\bf Sard's Theorem.} Let $\phi : X \rightarrow Y$ be a smooth map on smooth manifolds. Then the set of critical values of $\phi$ has measure zero.
+
+\begin{thebibliography}{9}
+\bibitem[Spivak]{Spivak} Spivak, Michael.  \emph{A Comprehensive Introduction to Differential Geometry.}  Volume I, Third Edition.  Publish of Perish, Inc.  Houston, Texas.  1999.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}
