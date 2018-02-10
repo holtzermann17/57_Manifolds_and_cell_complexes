@@ -1,0 +1,281 @@
+<!DOCTYPE html><html>
+<head>
+<title>knot theory</title>
+<!--Generated on Sat Feb 10 11:47:35 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">knot theory</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Knot theory is the study of <em class="ltx_emph ltx_font_italic">knots</em> and <em class="ltx_emph ltx_font_italic">links</em>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Roughly a <em class="ltx_emph ltx_font_italic">knot</em> is a simple closed curve in <math id="p3.m1" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>, and two knots are considered equivalent if and only if one can be smoothly deformed into another. This will often be used as a working definition as it is simple and appeals to intuition. Unfortunately this definition can not be taken too seriously because it includes many pathological cases, or wild knots, such as the connected sum of an infinite number of trefoils. Furthermore one must be careful about defining a “smooth deformation”, or all knots might turn out to be equivalent! (We shouldn’t be allowed to shrink part of a knot down to nothing.)</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Links are defined in terms of knots, so once we have a definition for knots we have no trouble defining them.</p>
+</div>
+<div id="Thmdefnx1" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition</span>.</h6>
+<div id="Thmdefnx1.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">link</em> is a set of disjoint knots.
+</p>
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Each knot is a <em class="ltx_emph ltx_font_italic">component</em> of the link. In particular a knot is a link of one component.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Luckily the knot theorist is not usually interested in the exact form of a knot or link, but rather the in its equivalence class. (Even so a possible formal definition for knots is given at the end of this entry.) All the “interesting” information about a knot or link can be described using a <em class="ltx_emph ltx_font_italic">knot diagram</em>. (It should be noted that the words “knot” and “link” are often used to mean an equivalence class of knots or links respectively. It is normally clear from context if this usage is intended.)</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">A knot diagram is a projection of a link onto a plane such that no more than two points of the link are projected to the same point on the plane and at each such point it is indicated which strand is closest to the plane (usually by erasing part of the lower strand). This can best be explained with some examples:</p>
+</div>
+<div id="p8" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p9" class="ltx_para">
+<img src="knot10_89" id="p9.g1" class="ltx_graphics" alt=""><img src="trefoil" id="p9.g2" class="ltx_graphics" alt="">
+</div>
+<div id="p10" class="ltx_para">
+<img src="nasty_unknot" id="p10.g1" class="ltx_graphics" alt=""><img src="unknot" id="p10.g2" class="ltx_graphics" alt="">
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p ltx_align_center"><em class="ltx_emph ltx_font_italic">some knot diagrams</em></p>
+</div>
+<div id="p12" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p">Two different knot diagrams may both represent the same knot — for example the last two diagrams both represent the unknot, although this is not obvious. Much of knot theory is devoted to telling when two knot diagrams represent the same link. In one sense this problem is easy — two knot diagrams represent equivalent links if and only if there exists a sequence of <em class="ltx_emph ltx_font_italic">Reidemeister moves</em> transforming one diagram to another.</p>
+</div>
+<div id="Thmdefnx2" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition</span>.</h6>
+<div id="Thmdefnx2.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">Reidemeister move</em> consists of modifying a portion of knot diagram in one of the following ways:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">A single strand may be twisted, adding a crossing of the strand with itself.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">A single twist may be removed from a strand removing a crossing of the strand with itself.
+</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">When two strands run parallel to each other one may be pushed under the other creating to new over-crossings.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">When one strand has two consecutive over-crossings with another strand the strands may be straightened so that the two run parallel.</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Given three strands <math id="I1.i5.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, <math id="I1.i5.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> and <math id="I1.i5.p1.m3" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> so that <math id="I1.i5.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> passes below <math id="I1.i5.p1.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> and <math id="I1.i5.p1.m6" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, <math id="I1.i5.p1.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> passes between <math id="I1.i5.p1.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="I1.i5.p1.m9" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, and <math id="I1.i5.p1.m10" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> passes above <math id="I1.i5.p1.m11" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="I1.i5.p1.m12" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, the strand <math id="I1.i5.p1.m13" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> may be moved to either side of the crossing of <math id="I1.i5.p1.m14" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> and <math id="I1.i5.p1.m15" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">Note that number 1. is the inverse of number 2. and number 3. is the inverse of number 4. Number 5 is its own inverse. In pictures:</p>
+</div>
+<div id="p15" class="ltx_para ltx_centering">
+<img src="twist" id="p15.g1" class="ltx_graphics" alt="">
+<p class="ltx_p"><span class="ltx_text" style="position:relative; bottom:36.1pt;"><math id="p15.m1" class="ltx_Math" alttext="\longleftrightarrow" display="inline"><mo>⟷</mo></math></span>
+<img src="untwist" id="p15.g2" class="ltx_graphics" alt=""></p>
+<img src="parallel" id="p15.g3" class="ltx_graphics" alt="">
+<p class="ltx_p"><span class="ltx_text" style="position:relative; bottom:36.1pt;"><math id="p15.m2" class="ltx_Math" alttext="\longleftrightarrow" display="inline"><mo>⟷</mo></math></span>      <img src="passover" id="p15.g4" class="ltx_graphics" alt=""></p>
+<img src="r3" id="p15.g5" class="ltx_graphics" alt="">
+<p class="ltx_p"><span class="ltx_text" style="position:relative; bottom:36.1pt;"><math id="p15.m3" class="ltx_Math" alttext="\longleftrightarrow" display="inline"><mo>⟷</mo></math></span>      <img src="r3" id="p15.g6" class="ltx_graphics" alt=""></p>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p">Finding such a sequence of Reidemeister moves is generally not easy, and proving that no such sequence exists can be very difficult, so other approaches must be taken.</p>
+</div>
+<div id="p17" class="ltx_para">
+<p class="ltx_p">Knot theorists have accumulated a large number of <em class="ltx_emph ltx_font_italic">knot invariants</em>, values associated with a knot diagram which are unchanged when the diagram is modified by a Reidemeister move. Two diagrams with the same invariant may not represent the same knot, but two diagrams with different invariant never represent the same knot.</p>
+</div>
+<div id="p18" class="ltx_para">
+<p class="ltx_p">Knot theorists also study ways in which a complex knot may be described in terms of simple pieces — for example every knot is the connected sum of non trivial prime knots and many knots can be described simply using Conway notation.</p>
+</div>
+<section id="S0.SSx1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">formal definitions of <em class="ltx_emph ltx_font_italic">knot</em>
+</h2>
+
+<section id="S0.SSx1.SSSx1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">polygonal knots</h3>
+
+<div id="S0.SSx1.SSSx1.p1" class="ltx_para">
+<p class="ltx_p">This definition is used by Charles Livingston in his book <em class="ltx_emph ltx_font_italic">Knot Theory</em>. It avoids the problem of wild knots by restricting knots to piece-wise linear (polygonal) curves. Every knot that is intuitively “tame” can be approximated by such knot. We also define the <em class="ltx_emph ltx_font_italic">vertices</em>, <em class="ltx_emph ltx_font_italic">elementary deformation</em>, and <em class="ltx_emph ltx_font_italic">equivalence</em> of knots.</p>
+</div>
+<div id="Thmdefnx3" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition</span>.</h6>
+<div id="Thmdefnx3.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">knot</em> is a simple closed polygonal curve in <math id="Thmdefnx3.p1.m1" class="ltx_Math" alttext="\mathbb{S}^{3}" display="inline"><msup><mi>𝕊</mi><mn>3</mn></msup></math>.</p>
+</div>
+</div>
+<div id="Thmdefnx4" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition</span>.</h6>
+<div id="Thmdefnx4.p1" class="ltx_para">
+<p class="ltx_p">The vertices of a knot are the smallest ordered set of points such that the knot can be constructed by connecting them.</p>
+</div>
+</div>
+<div id="Thmdefnx5" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition</span>.</h6>
+<div id="Thmdefnx5.p1" class="ltx_para">
+<p class="ltx_p">A knot <math id="Thmdefnx5.p1.m1" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> is an <em class="ltx_emph ltx_font_italic">elementary deformation</em> of a knot <math id="Thmdefnx5.p1.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> if one is formed from the other by adding a single vertex <math id="Thmdefnx5.p1.m3" class="ltx_Math" alttext="v_{0}" display="inline"><msub><mi>v</mi><mn>0</mn></msub></math> not on the knot such that the triangle formed by <math id="Thmdefnx5.p1.m4" class="ltx_Math" alttext="v_{0}" display="inline"><msub><mi>v</mi><mn>0</mn></msub></math> together with its adjacent vertices <math id="Thmdefnx5.p1.m5" class="ltx_Math" alttext="v_{1}" display="inline"><msub><mi>v</mi><mn>1</mn></msub></math> and <math id="Thmdefnx5.p1.m6" class="ltx_Math" alttext="v_{2}" display="inline"><msub><mi>v</mi><mn>2</mn></msub></math> intersects the knot only along the segment <math id="Thmdefnx5.p1.m7" class="ltx_Math" alttext="[v_{1},v_{2}]" display="inline"><mrow><mo stretchy="false">[</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow></math>.</p>
+</div>
+</div>
+<div id="Thmdefnx6" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition</span>.</h6>
+<div id="Thmdefnx6.p1" class="ltx_para">
+<p class="ltx_p">A knot <math id="Thmdefnx6.p1.m1" class="ltx_Math" alttext="K_{0}" display="inline"><msub><mi>K</mi><mn>0</mn></msub></math> is <em class="ltx_emph ltx_font_italic">equivalent</em> to a knot <math id="Thmdefnx6.p1.m2" class="ltx_Math" alttext="K_{n}" display="inline"><msub><mi>K</mi><mi>n</mi></msub></math> if there exists a sequence of knots <math id="Thmdefnx6.p1.m3" class="ltx_Math" alttext="K_{1},\ldots,K_{n-1}" display="inline"><mrow><msub><mi>K</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>K</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></math> such that <math id="Thmdefnx6.p1.m4" class="ltx_Math" alttext="K_{i}" display="inline"><msub><mi>K</mi><mi>i</mi></msub></math> is an elementary deformation of <math id="Thmdefnx6.p1.m5" class="ltx_Math" alttext="K_{i-1}" display="inline"><msub><mi>K</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub></math> for <math id="Thmdefnx6.p1.m6" class="ltx_Math" alttext="1&lt;i\leq n" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>i</mi><mo>≤</mo><mi>n</mi></mrow></math>.</p>
+</div>
+</div>
+</section>
+<section id="S0.SSx1.SSSx2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">smooth submanifold</h3>
+
+<div id="S0.SSx1.SSSx2.p1" class="ltx_para">
+<p class="ltx_p">This definition is used by Raymond Lickorish in <em class="ltx_emph ltx_font_italic">An Introduction to Knot Theory</em>.</p>
+</div>
+<div id="Thmdefnx7" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition</span>.</h6>
+<div id="Thmdefnx7.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">link</em> is a smooth one dimensional submanifold of the 3-sphere <math id="Thmdefnx7.p1.m1" class="ltx_Math" alttext="S^{3}" display="inline"><msup><mi>S</mi><mn>3</mn></msup></math>. A <em class="ltx_emph ltx_font_italic">knot</em> is a link consisting of one component.</p>
+</div>
+</div>
+<div id="Thmdefnx8" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition</span>.</h6>
+<div id="Thmdefnx8.p1" class="ltx_para">
+<p class="ltx_p">Links <math id="Thmdefnx8.p1.m1" class="ltx_Math" alttext="L_{1}" display="inline"><msub><mi>L</mi><mn>1</mn></msub></math> and <math id="Thmdefnx8.p1.m2" class="ltx_Math" alttext="L_{2}" display="inline"><msub><mi>L</mi><mn>2</mn></msub></math> are defined to be equivalent if there is an orientation-preserving homeomorphism <math id="Thmdefnx8.p1.m3" class="ltx_Math" alttext="h:S^{3}\to S^{3}" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><msup><mi>S</mi><mn>3</mn></msup><mo>→</mo><msup><mi>S</mi><mn>3</mn></msup></mrow></mrow></math> such that <math id="Thmdefnx8.p1.m4" class="ltx_Math" alttext="h(L_{1})=L_{2}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>L</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>L</mi><mn>2</mn></msub></mrow></math>.</p>
+</div>
+</div>
+<div id="S0.SSx1.SSSx2.p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">knot theory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">KnotTheory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:17:27</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:17:27</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 57M25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Unknot</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ConnectedSum</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Tangle</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">JonesPolynomialKnotTheory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">knot</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">link</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">knot diagram</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Reidemeister moves</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">vertices</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">elementary deformation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:47:35 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

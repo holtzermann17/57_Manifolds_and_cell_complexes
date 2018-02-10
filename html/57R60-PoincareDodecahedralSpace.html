@@ -1,0 +1,161 @@
+<!DOCTYPE html><html>
+<head>
+<title>Poincaré dodecahedral space</title>
+<!--Generated on Sat Feb 10 11:49:13 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Poincaré dodecahedral space</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Poincaré originally conjectured <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="" class="ltx_ref">4</a>]</cite> that a homology 3-sphere (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/HomologySphere</span>) must be homeomorphic to <math id="p1.m1" class="ltx_Math" alttext="S^{3}" display="inline"><msup><mi>S</mi><mn>3</mn></msup></math>. He later found a counterexample based on the group of rotations of the
+regular dodecahedron (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RegularPolyhedron</span>), and restated his conjecture in  of the fundamental group. (See <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite>). To be accurate, the restatement took the form of a question. However it has always been referred to as Poincaré’s Conjecture.)</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">This conjecture was one of the <span class="ltx_text ltx_font_typewriter">http://www.claymath.org/</span>Clay Mathematics Institute’s Millennium Problems. It was finally proved by Grisha Perelman (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/GrigoriPerelman</span>) as a
+corollary of his  on Thurston’s geometrization conjecture (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ThurstonsGeometrizationConjecture</span>). Perelman was awarded the Fields Medal (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/FieldsMedal</span>) for this work, but he
+<span class="ltx_text ltx_font_typewriter">http://news.bbc.co.uk/2/hi/science/nature/5274040.stm</span>declined the award.
+Perelman’s manuscripts can be found at the arXiv: <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>, <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>,
+<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>]</cite>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Here we take a quick look at Poincaré’s example. Let <math id="p3.m1" class="ltx_Math" alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math> be the rotations of the
+regular dodecahedron (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RegularPolyhedron</span>). It is easy to check that <math id="p3.m2" class="ltx_Math" alttext="\Gamma\cong A_{5}" display="inline"><mrow><mi mathvariant="normal">Γ</mi><mo>≅</mo><msub><mi>A</mi><mn>5</mn></msub></mrow></math>. (Indeed, <math id="p3.m3" class="ltx_Math" alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math> permutes transitively (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/GroupAction</span>) the 6 pairs of  faces, and the stabilizer of any pair induces a dihedral group of order (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/OrderGroup</span>) 10.) In particular, <math id="p3.m4" class="ltx_Math" alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math> is perfect. Let <math id="p3.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> be the quotient space <math id="p3.m6" class="ltx_Math" alttext="P=SO_{3}(\mathbb{R})/\Gamma" display="inline"><mrow><mi>P</mi><mo>=</mo><mrow><mrow><mi>S</mi><mo>⁢</mo><msub><mi>O</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mi mathvariant="normal">Γ</mi></mrow></mrow></math>. We check that <math id="p3.m7" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a homology sphere.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">To do this it is easier to work in the universal cover <math id="p4.m1" class="ltx_Math" alttext="SU(2)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="p4.m2" class="ltx_Math" alttext="SO_{3}(\mathbb{R})" display="inline"><mrow><mi>S</mi><mo>⁢</mo><msub><mi>O</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></math>, since <math id="p4.m3" class="ltx_Math" alttext="SU(2)\cong S^{3}" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>≅</mo><msup><mi>S</mi><mn>3</mn></msup></mrow></math>. The  of <math id="p4.m4" class="ltx_Math" alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math> to <math id="p4.m5" class="ltx_Math" alttext="SU(2)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> will be denoted <math id="p4.m6" class="ltx_Math" alttext="\hat{\Gamma}" display="inline"><mover accent="true"><mi mathvariant="normal">Γ</mi><mo stretchy="false">^</mo></mover></math>. Hence <math id="p4.m7" class="ltx_Math" alttext="P=SU(2)/\hat{\Gamma}" display="inline"><mrow><mi>P</mi><mo>=</mo><mrow><mrow><mi>S</mi><mo>⁢</mo><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mover accent="true"><mi mathvariant="normal">Γ</mi><mo stretchy="false">^</mo></mover></mrow></mrow></math>. <math id="p4.m8" class="ltx_Math" alttext="\hat{\Gamma}" display="inline"><mover accent="true"><mi mathvariant="normal">Γ</mi><mo stretchy="false">^</mo></mover></math> is a nontrivial central  of <math id="p4.m9" class="ltx_Math" alttext="A_{5}" display="inline"><msub><mi>A</mi><mn>5</mn></msub></math> by <math id="p4.m10" class="ltx_Math" alttext="\{\pm I\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mo>±</mo><mi>I</mi></mrow><mo stretchy="false">}</mo></mrow></math>, which means that there is no splitting to the surjection <math id="p4.m11" class="ltx_Math" alttext="\hat{\Gamma}\to\Gamma" display="inline"><mrow><mover accent="true"><mi mathvariant="normal">Γ</mi><mo stretchy="false">^</mo></mover><mo>→</mo><mi mathvariant="normal">Γ</mi></mrow></math>. In fact <math id="p4.m12" class="ltx_Math" alttext="A_{5}" display="inline"><msub><mi>A</mi><mn>5</mn></msub></math> has no nonidentity 2-dimensional unitary representations. In particular, <math id="p4.m13" class="ltx_Math" alttext="\hat{\Gamma}" display="inline"><mover accent="true"><mi mathvariant="normal">Γ</mi><mo stretchy="false">^</mo></mover></math>, like <math id="p4.m14" class="ltx_Math" alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math>, is perfect (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/PerfectGroup</span>).</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Now <math id="p5.m1" class="ltx_Math" alttext="\pi_{1}(P)\cong\hat{\Gamma}" display="inline"><mrow><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≅</mo><mover accent="true"><mi mathvariant="normal">Γ</mi><mo stretchy="false">^</mo></mover></mrow></math>, whence <math id="p5.m2" class="ltx_Math" alttext="H^{1}(P)=0" display="inline"><mrow><mrow><msup><mi>H</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> (since it is the abelianization of <math id="p5.m3" class="ltx_Math" alttext="\hat{\Gamma}" display="inline"><mover accent="true"><mi mathvariant="normal">Γ</mi><mo stretchy="false">^</mo></mover></math>). By Poincaré duality and the universal coefficient theorem (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/UniversalCoefficentTheorem</span>), <math id="p5.m4" class="ltx_Math" alttext="H^{2}(P)\cong 0" display="inline"><mrow><mrow><msup><mi>H</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≅</mo><mn>0</mn></mrow></math> as well. Thus, <math id="p5.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is indeed a homology sphere.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">The dodecahedron is a fundamental  in a tiling of hyperbolic 3-space, and hence <math id="p6.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> can also be realized by gluing the  faces of a  dodecahedron. Alternatively, Dehn showed how to construct this same example using surgery around a trefoil.
+Dale Rolfson’s fun book <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite> has more on the surgical view of Poincaré’s example.</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+G. Perelman,
+<span class="ltx_text ltx_font_typewriter">http://arxiv.org/abs/math.DG/0211159/</span>“The entropy formula for the Ricci flow and its geometric applications”,
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+G. Perelman,
+<span class="ltx_text ltx_font_typewriter">http://arxiv.org/abs/math.DG/0303109/</span>“Ricci flow with surgery on three-manifolds”,
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+G. Perelman, <span class="ltx_text ltx_font_typewriter">http://arxiv.org/abs/math.DG/0307245/</span>“Finite extinction time for the solutions to the Ricci flow on certain three-manifolds”.
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock">
+H. Poincaré, “Second complément à l’analysis situs”, Proceedings of the LMS, 1900.
+
+</span>
+      </li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">5</span>
+        
+<span class="ltx_bibblock">
+H. Poincaré, “Cinquième complément à l’analysis situs”, Proceedings of the LMS, 1904.
+
+</span>
+      </li>
+      
+<li id="bib.bib6" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">6</span>
+        
+<span class="ltx_bibblock">
+D. Rolfson, Knots and Links. Publish or Perish Press, 1976.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Poincaré dodecahedral space</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PoincareDodecahedralSpace</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:56:21</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:56:21</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">65</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 57R60</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:49:13 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

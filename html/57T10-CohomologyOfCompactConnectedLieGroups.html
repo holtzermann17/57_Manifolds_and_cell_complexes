@@ -1,0 +1,363 @@
+<!DOCTYPE html><html>
+<head>
+<title>cohomology of compact connected Lie groups</title>
+<!--Generated on Sat Feb 10 11:49:29 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">cohomology of compact connected Lie groups</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break"><span class="ltx_ERROR undefined">\PMlinkescapephrase</span>
+<p class="ltx_p">properties
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>structure
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>type
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>singular
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>theory
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>proposition
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>compact
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>connected
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>cohomology
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>complex
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>right
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>invariant
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>tangent space
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>adjoint
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>alternating</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">This entry aims to describe some properties of the cohomology (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/DeRhamCohomology</span>) of compact (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Compact</span>) connected (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ConnectedSpace</span>) Lie groups. It turns out that this type of Lie groups admit a somewhat simplified cohomology theory, compared with singular cohomology or de Rham cohomology. This simplified theory then allows one to observe some of the  imposed on the structure of the cohomology groups of compact connected Lie groups.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The construction and results presented in the entry on invariant differential forms are assumed and will be the  of what we are about to describe.</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Cohomology of invariant forms</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a compact connected Lie group. Given a differential manifold <math id="S1.p1.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> and smooth action of <math id="S1.p1.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> in <math id="S1.p1.m4" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>, let <math id="S1.p1.m5" class="ltx_Math" alttext="\Omega_{G}^{k}(M)" display="inline"><mrow><msubsup><mi mathvariant="normal">Ω</mi><mi>G</mi><mi>k</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math> denote the space of the <math id="S1.p1.m6" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-invariant differential forms (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/InvariantDifferentialForm</span>) in <math id="S1.p1.m7" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>. It is known (see this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/InvariantDifferentialForm</span>)) that <math id="S1.p1.m8" class="ltx_Math" alttext="\Omega_{G}^{*}(M)" display="inline"><mrow><msubsup><mi mathvariant="normal">Ω</mi><mi>G</mi><mo>*</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math> forms a chain complex and the cohomology groups of this complex are isomorphic to the cohomology groups of <math id="S1.p1.m9" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>, i.e.</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="H^{k}(\Omega_{G}(M))\cong H^{k}(M;\mathbb{R})" display="block"><mrow><mrow><msup><mi>H</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi mathvariant="normal">Ω</mi><mi>G</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≅</mo><mrow><msup><mi>H</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>;</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">We now regard the manifold <math id="S1.p2.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> as a compact connected Lie group <math id="S1.p2.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. There are several smooth actions on <math id="S1.p2.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> that are worth to be considered, such as:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">The action of <math id="I1.i1.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> on itself by left multiplication.
+</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The action of <math id="I1.i2.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> on itself by right multiplication.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">The action of <math id="I1.i3.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> on itself by conjugation.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">The action of <math id="I1.i4.p1.m1" class="ltx_Math" alttext="G\times G" display="inline"><mrow><mi>G</mi><mo>×</mo><mi>G</mi></mrow></math> on <math id="I1.i4.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> given by <math id="I1.i4.p1.m3" class="ltx_Math" alttext="(g,h)\cdot k:=gkh^{-1}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>g</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mi>k</mi></mrow><mo>:=</mo><mrow><mi>g</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><msup><mi>h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math></p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Thus, by the previous remark, the cohomology of a compact connected Lie group <math id="S1.p3.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> restricts to the cohomology of left invariant forms, right invariant forms, adjoint invariant forms or bi-invariant forms (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/InvariantDifferentialForm</span>). Moreover, the cohomology of <math id="S1.p3.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is the cohomology of differential forms invariant under any smooth action of any compact connect Lie group on <math id="S1.p3.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> .</p>
+</div>
+<section id="S1.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.1 </span>Left invariant forms</h3>
+
+<div id="S1.SS1.p1" class="ltx_para">
+<p class="ltx_p">Since left invariant forms are uniquely determined by their values in <math id="S1.SS1.p1.m1" class="ltx_Math" alttext="T_{e}G" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></math>, the tangent space (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/TangentSpace</span>) at the identity, they allow a simpler characterization of the cohomology of compact connected Lie groups.</p>
+</div>
+<div id="S1.SS1.p2" class="ltx_para">
+<p class="ltx_p"><math id="S1.SS1.p2.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S1.SS1.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition -</span> Let <math id="S1.SS1.p3.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a compact connected Lie group and <math id="S1.SS1.p3.m2" class="ltx_Math" alttext="T_{e}G^{*}" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><msup><mi>G</mi><mo>*</mo></msup></mrow></math> the chain complex of alternating forms on <math id="S1.SS1.p3.m3" class="ltx_Math" alttext="T_{e}G" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></math> with coboundary operator <math id="S1.SS1.p3.m4" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> given by</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="d\omega(X_{0},\dots,X_{k})=\sum_{i&lt;j}(-1)^{i+j}\omega([X_{i},X_{j}],X_{0},%
+\dots,\hat{X_{i}},\dots,\hat{X_{j}},\dots,X_{k})" display="block"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>&lt;</mo><mi>j</mi></mrow></munder><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>+</mo><mi>j</mi></mrow></msup><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mi>i</mi></msub><mo>,</mo><msub><mi>X</mi><mi>j</mi></msub><mo stretchy="false">]</mo></mrow><mo>,</mo><msub><mi>X</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mover accent="true"><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false">^</mo></mover><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mover accent="true"><msub><mi>X</mi><mi>j</mi></msub><mo stretchy="false">^</mo></mover><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then, the cohomology groups of <math id="S1.SS1.p3.m5" class="ltx_Math" alttext="H^{k}(G,\mathbb{R})" display="inline"><mrow><msup><mi>H</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></math> are isomorphic to the cohomology groups <math id="S1.SS1.p3.m6" class="ltx_Math" alttext="H^{k}(T_{e}G^{*})" display="inline"><mrow><msup><mi>H</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><msup><mi>G</mi><mo>*</mo></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></math> of the complex <math id="S1.SS1.p3.m7" class="ltx_Math" alttext="T_{e}G^{*}" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><msup><mi>G</mi><mo>*</mo></msup></mrow></math>.</p>
+</div>
+<div id="S1.SS1.p4" class="ltx_para">
+<p class="ltx_p"><math id="S1.SS1.p4.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+</section>
+<section id="S1.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2 </span>Bi-invariant forms</h3>
+
+<div id="S1.SS2.p1" class="ltx_para">
+<p class="ltx_p">Two sided invariance is just the same as left invariance  adjoint invariance. Hence, every bi-invariant form can be seen as an alternating form on <math id="S1.SS2.p1.m1" class="ltx_Math" alttext="T_{e}G" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></math> wich is also adjoint invariant. Thus, just like the previous proposition, the cohomology groups of <math id="S1.SS2.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> are just the cohomology groups of the complex <math id="S1.SS2.p1.m3" class="ltx_Math" alttext="T_{e}G^{*}_{ad}" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><msubsup><mi>G</mi><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>*</mo></msubsup></mrow></math> of adjoint invariant alternating forms on <math id="S1.SS2.p1.m4" class="ltx_Math" alttext="T_{e}G" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></math>, with coboundary operator</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="d\omega(X_{0},\dots,X_{k})=\sum_{i&lt;j}(-1)^{i+j}\omega([X_{i},X_{j}],X_{0},%
+\dots,\hat{X_{i}},\dots,\hat{X_{j}},\dots,X_{k})" display="block"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>&lt;</mo><mi>j</mi></mrow></munder><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>+</mo><mi>j</mi></mrow></msup><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mi>i</mi></msub><mo>,</mo><msub><mi>X</mi><mi>j</mi></msub><mo stretchy="false">]</mo></mrow><mo>,</mo><msub><mi>X</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mover accent="true"><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false">^</mo></mover><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mover accent="true"><msub><mi>X</mi><mi>j</mi></msub><mo stretchy="false">^</mo></mover><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS2.p2" class="ltx_para">
+<p class="ltx_p">This can be further improved. The following important theorem will be the key to more specific results.</p>
+</div>
+<div id="S1.SS2.p3" class="ltx_para">
+<p class="ltx_p"><math id="S1.SS2.p3.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S1.SS2.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 1 -</span> Let <math id="S1.SS2.p4.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a compact connected Lie group. Let <math id="S1.SS2.p4.m2" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> be a multilinear <math id="S1.SS2.p4.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-form on <math id="S1.SS2.p4.m4" class="ltx_Math" alttext="T_{e}" display="inline"><msub><mi>T</mi><mi>e</mi></msub></math>. Then <math id="S1.SS2.p4.m5" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is adjoint invariant if and only if the following equality holds:</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="\sum_{i=1}^{k}\omega(X_{1},\dots,X_{i-1},[Y,X_{i}],X_{i+1},\dots,X_{k})=0\;\;%
+\;\;\;\text{for all}\;Y,X_{1},\dots,X_{k}\in T_{e}G" display="block"><mrow><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo>,</mo><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false">]</mo></mrow><mo>,</mo><msub><mi>X</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mn>0</mn><mo mathvariant="italic" separator="true">  </mo><mrow><mpadded width="+2.8pt"><mtext>for all</mtext></mpadded><mo>⁢</mo><mi>Y</mi></mrow><mo>,</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><msub><mi>X</mi><mi>k</mi></msub><mo>∈</mo><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS2.p5" class="ltx_para">
+<p class="ltx_p"><math id="S1.SS2.p5.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S1.SS2.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition -</span> Every adjoint invariant alternating form on <math id="S1.SS2.p6.m1" class="ltx_Math" alttext="T_{e}G" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></math> is closed (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ClosedDifferentialForm</span>).</p>
+</div>
+<div id="S1.SS2.p7" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_bold ltx_font_italic">Proof:</em> Let <math id="S1.SS2.p7.m1" class="ltx_Math" alttext="\alpha_{i,i}=0" display="inline"><mrow><msub><mi>α</mi><mrow><mi>i</mi><mo>,</mo><mi>i</mi></mrow></msub><mo>=</mo><mn>0</mn></mrow></math>, <math id="S1.SS2.p7.m2" class="ltx_Math" alttext="\alpha_{i,j}=(-1)^{j}" display="inline"><mrow><msub><mi>α</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>j</mi></msup></mrow></math> if <math id="S1.SS2.p7.m3" class="ltx_Math" alttext="i&lt;j" display="inline"><mrow><mi>i</mi><mo>&lt;</mo><mi>j</mi></mrow></math> and <math id="S1.SS2.p7.m4" class="ltx_Math" alttext="\alpha_{i,j}=(-1)^{j+1}" display="inline"><mrow><msub><mi>α</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math> if <math id="S1.SS2.p7.m5" class="ltx_Math" alttext="i&gt;j" display="inline"><mrow><mi>i</mi><mo>&gt;</mo><mi>j</mi></mrow></math>. Then</p>
+<table id="S2.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S1.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex5.m1" class="ltx_Math" alttext="\displaystyle d\omega(X_{0},\dots,X_{k})" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex5.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{2}\sum_{i\neq j}(-1)^{i}\alpha_{i,j}\omega([X_{i},X_{j}]%
+,X_{0},\dots,\hat{X_{i}},\dots,\hat{X_{j}},\dots,X_{k})" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow></munder></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>i</mi></msup><mo>⁢</mo><msub><mi>α</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mi>i</mi></msub><mo>,</mo><msub><mi>X</mi><mi>j</mi></msub><mo stretchy="false">]</mo></mrow><mo>,</mo><msub><mi>X</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mover accent="true"><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false">^</mo></mover><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mover accent="true"><msub><mi>X</mi><mi>j</mi></msub><mo stretchy="false">^</mo></mover><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex6.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{2}\sum_{i}(-1)^{i}\sum_{j}\alpha_{i,j}\omega([X_{i},X_{j%
+}],X_{0},\dots,\hat{X_{i}},\dots,\hat{X_{j}},\dots,X_{k})" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>i</mi></munder></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>i</mi></msup><mo>⁢</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>j</mi></munder></mstyle><mrow><msub><mi>α</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mi>i</mi></msub><mo>,</mo><msub><mi>X</mi><mi>j</mi></msub><mo stretchy="false">]</mo></mrow><mo>,</mo><msub><mi>X</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mover accent="true"><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false">^</mo></mover><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mover accent="true"><msub><mi>X</mi><mi>j</mi></msub><mo stretchy="false">^</mo></mover><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex7.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex7.m3" class="ltx_Math" alttext="\displaystyle 0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the  sum is zero by Theorem 1. <math id="S1.SS2.p7.m6" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="S1.SS2.p8" class="ltx_para">
+<p class="ltx_p"><math id="S1.SS2.p8.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S1.SS2.p9" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Corollary 1 -</span> Let <math id="S1.SS2.p9.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a compact connected Lie group. The cohomology groups <math id="S1.SS2.p9.m2" class="ltx_Math" alttext="H^{k}(G;\mathbb{R})" display="inline"><mrow><msup><mi>H</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>;</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></math> are isomorphic to the vector space of adjoint invariant alternating <math id="S1.SS2.p9.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-forms on <math id="S1.SS2.p9.m4" class="ltx_Math" alttext="T_{e}G" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></math>.</p>
+</div>
+<div id="S1.SS2.p10" class="ltx_para">
+<p class="ltx_p"><math id="S1.SS2.p10.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+</section>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Relations between cohomology groups</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a compact connected Lie group. In the proofs of the following results we are always using the fact stated in Corollary 1, that <math id="S2.p1.m2" class="ltx_Math" alttext="H^{k}(G;\mathbb{R})" display="inline"><mrow><msup><mi>H</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>;</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is exactly the space of adjoint invariant alternating <math id="S2.p1.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-forms on <math id="S2.p1.m4" class="ltx_Math" alttext="T_{e}G" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></math>. Let <math id="S2.p1.m5" class="ltx_Math" alttext="[T_{e}G,T_{e}G]" display="inline"><mrow><mo stretchy="false">[</mo><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow><mo>,</mo><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow><mo stretchy="false">]</mo></mrow></math> denote the subspace (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/VectorSubspace</span>) of <math id="S2.p1.m6" class="ltx_Math" alttext="T_{e}G" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></math> generated by elements of the form <math id="S2.p1.m7" class="ltx_Math" alttext="[X,Y]" display="inline"><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></math>, with <math id="S2.p1.m8" class="ltx_Math" alttext="X,Y\in T_{e}G" display="inline"><mrow><mrow><mi>X</mi><mo>,</mo><mi>Y</mi></mrow><mo>∈</mo><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p"><math id="S2.p2.m1" class="ltx_Math" alttext="\;" display="inline"><mi></mi></math></p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition -</span> <math id="S2.p3.m1" class="ltx_Math" alttext="\qquad[T_{e}G,T_{e}G]=T_{e}G\;\,\Longleftrightarrow\;\,H^{1}(G;\mathbb{R})=0" display="inline"><mrow><mrow><mrow><mo lspace="22.5pt" stretchy="false">[</mo><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow><mo>,</mo><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mpadded width="+4.4pt"><mi>G</mi></mpadded></mrow></mrow><mo rspace="6.9pt">⟺</mo><mrow><mrow><msup><mi>H</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>;</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></mrow></math></p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_bold ltx_font_italic">Proof:</em> It follows easily form the fact that adjoint invariant alternating <math id="S2.p4.m1" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>-forms on <math id="S2.p4.m2" class="ltx_Math" alttext="T_{e}G" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></math> are precisely those who satisfy <math id="S2.p4.m3" class="ltx_Math" alttext="\omega([X,Y])=0" display="inline"><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="S2.p4.m4" class="ltx_Math" alttext="X,Y\in T_{e}G" display="inline"><mrow><mrow><mi>X</mi><mo>,</mo><mi>Y</mi></mrow><mo>∈</mo><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></mrow></math> (Theorem 1). <math id="S2.p4.m5" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p"><math id="S2.p5.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S2.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Corollary -</span> <math id="S2.p6.m1" class="ltx_Math" alttext="\qquad H^{1}(G;\mathbb{R})=0\;\,\Longrightarrow\;\,H^{2}(G;\mathbb{R})=0" display="inline"><mrow><mrow><msup><mpadded lspace="20pt" width="+20pt"><mi>H</mi></mpadded><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>;</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mpadded width="+4.4pt"><mn>0</mn></mpadded><mo rspace="6.9pt">⟹</mo><mrow><msup><mi>H</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>;</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></p>
+</div>
+<div id="S2.p7" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_bold ltx_font_italic">Proof:</em> Let <math id="S2.p7.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> be an adjoint invariant <math id="S2.p7.m2" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>-form on <math id="S2.p7.m3" class="ltx_Math" alttext="T_{e}G" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></math>. We have that</p>
+<table id="S2.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S2.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex8.m1" class="ltx_Math" alttext="\displaystyle 0=d\omega(X,Y,Z)" display="inline"><mrow><mn>0</mn><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo>,</mo><mi>Z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S2.Ex8.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex8.m3" class="ltx_Math" alttext="\displaystyle-\omega([X,Y],Z)+\omega([X,Z],Y)-\omega([Y,Z],X)" display="inline"><mrow><mrow><mrow><mo>-</mo><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo>,</mo><mi>Z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Z</mi><mo stretchy="false">]</mo></mrow><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo>,</mo><mi>Z</mi><mo stretchy="false">]</mo></mrow><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S2.Ex9.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex9.m3" class="ltx_Math" alttext="\displaystyle-\omega([X,Y],Z)-\Big{(}\omega([Z,X],Y)+\omega(X,[Z,Y])\Big{)}" display="inline"><mrow><mrow><mo>-</mo><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo>,</mo><mi>Z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mi>Z</mi><mo>,</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><mo stretchy="false">[</mo><mi>Z</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S2.Ex10.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex10.m3" class="ltx_Math" alttext="\displaystyle-\omega([X,Y],Z)" display="inline"><mrow><mo>-</mo><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo>,</mo><mi>Z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the last step comes from Theorem 1. Now, as <math id="S2.p7.m4" class="ltx_Math" alttext="[T_{e}G,T_{e}G]=T_{e}G" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow><mo>,</mo><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></mrow></math> by the previous Proposition, <math id="S2.p7.m5" class="ltx_Math" alttext="\omega=0" display="inline"><mrow><mi>ω</mi><mo>=</mo><mn>0</mn></mrow></math>. <math id="S2.p7.m6" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math>
+</p>
+</div>
+<div id="S2.p8" class="ltx_para">
+<p class="ltx_p"><math id="S2.p8.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S2.p9" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p9.m1" class="ltx_Math" alttext="Sym^{2}" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><msup><mi>m</mi><mn>2</mn></msup></mrow></math> be the space of adjoint invariant symmetric bilinear forms on <math id="S2.p9.m2" class="ltx_Math" alttext="T_{e}G" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></math> and <math id="S2.p9.m3" class="ltx_Math" alttext="T_{e}G_{a}d^{k}" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><msub><mi>G</mi><mi>a</mi></msub><mo>⁢</mo><msup><mi>d</mi><mi>k</mi></msup></mrow></math> the space of adjoint invariant alternating <math id="S2.p9.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-forms on <math id="S2.p9.m5" class="ltx_Math" alttext="T_{e}G" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></math>.</p>
+</div>
+<div id="S2.p10" class="ltx_para">
+<p class="ltx_p"><math id="S2.p10.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S2.p11" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 2 - </span> Suppose <math id="S2.p11.m1" class="ltx_Math" alttext="H^{1}(G;\mathbb{R})=0" display="inline"><mrow><mrow><msup><mi>H</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>;</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>. The function <math id="S2.p11.m2" class="ltx_Math" alttext="\Phi:Sym^{2}\longrightarrow T_{e}G^{3}" display="inline"><mrow><mi mathvariant="normal">Φ</mi><mo>:</mo><mrow><mrow><mi>S</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><msup><mi>m</mi><mn>2</mn></msup></mrow><mo>⟶</mo><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><msup><mi>G</mi><mn>3</mn></msup></mrow></mrow></mrow></math> defined by</p>
+<table id="S2.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex11.m1" class="ltx_Math" alttext="\Phi(\eta)\,(X,Y,Z):=\eta([X,Y],Z)\,,\qquad\qquad X,Y,Z\in T_{e}G" display="block"><mrow><mrow><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>η</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo>,</mo><mi>Z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mrow><mi>η</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo>,</mo><mi>Z</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow><mo rspace="42.5pt">,</mo><mi>X</mi><mo>,</mo><mi>Y</mi></mrow></mrow><mo>,</mo><mrow><mi>Z</mi><mo>∈</mo><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is well defined and bijective.</p>
+</div>
+<div id="S2.p12" class="ltx_para">
+<p class="ltx_p"><math id="S2.p12.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S2.p13" class="ltx_para">
+<p class="ltx_p">One can always assure the existence of nonzero adjoint invariant symmetric bilinear forms on <math id="S2.p13.m1" class="ltx_Math" alttext="T_{e}G" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></math>. This can be achieved by taking an inner product <math id="S2.p13.m2" class="ltx_Math" alttext="\langle\cdot,\cdot\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo stretchy="false">⟩</mo></mrow></math> on <math id="S2.p13.m3" class="ltx_Math" alttext="T_{e}G" display="inline"><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></math> and defining, for <math id="S2.p13.m4" class="ltx_Math" alttext="X,Y\in T_{e}G" display="inline"><mrow><mrow><mi>X</mi><mo>,</mo><mi>Y</mi></mrow><mo>∈</mo><mrow><msub><mi>T</mi><mi>e</mi></msub><mo>⁢</mo><mi>G</mi></mrow></mrow></math>,</p>
+<table id="S2.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex12.m1" class="ltx_Math" alttext="\eta(X,Y):=\frac{1}{\mu(G)}\int_{G}\langle(C_{g})_{*}X,(C_{g})_{*}Y\rangle\;d%
+\mu(g)" display="block"><mrow><mrow><mi>η</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mfrac><mn>1</mn><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>G</mi></msub><mrow><mrow><mo stretchy="false">⟨</mo><mrow><msub><mrow><mo stretchy="false">(</mo><msub><mi>C</mi><mi>g</mi></msub><mo stretchy="false">)</mo></mrow><mo>*</mo></msub><mo>⁢</mo><mi>X</mi></mrow><mo>,</mo><mrow><msub><mrow><mo stretchy="false">(</mo><msub><mi>C</mi><mi>g</mi></msub><mo stretchy="false">)</mo></mrow><mo>*</mo></msub><mo>⁢</mo><mi>Y</mi></mrow><mo rspace="5.3pt" stretchy="false">⟩</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S2.p13.m5" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> is the Haar measure of <math id="S2.p13.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and <math id="S2.p13.m7" class="ltx_Math" alttext="C_{g}" display="inline"><msub><mi>C</mi><mi>g</mi></msub></math> is the function of conjugation by <math id="S2.p13.m8" class="ltx_Math" alttext="g\in G" display="inline"><mrow><mi>g</mi><mo>∈</mo><mi>G</mi></mrow></math>. Hence we can conclude that</p>
+</div>
+<div id="S2.p14" class="ltx_para">
+<p class="ltx_p"><math id="S2.p14.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S2.p15" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Corollary -</span> Suppose <math id="S2.p15.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is nontrivial. Then <math id="S2.p15.m2" class="ltx_Math" alttext="\;\;H^{1}(G;\mathbb{R})=0\;\,\Longrightarrow\;\,H^{3}(G;\mathbb{R})\neq 0" display="inline"><mrow><mrow><msup><mpadded lspace="5.6pt" width="+5.6pt"><mi>H</mi></mpadded><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>;</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mpadded width="+4.4pt"><mn>0</mn></mpadded><mo rspace="6.9pt">⟹</mo><mrow><msup><mi>H</mi><mn>3</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>;</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math></p>
+</div>
+<div id="S2.p16" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">cohomology of compact connected Lie groups</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CohomologyOfCompactConnectedLieGroups</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:49:47</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:49:47</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Feature</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 57T10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 58A12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55N99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 22E15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">InvariantDifferentialForm</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:49:29 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
